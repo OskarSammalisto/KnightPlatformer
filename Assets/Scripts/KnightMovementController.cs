@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class KnightMovementController : MonoBehaviour {
     public CharacterController2D Controller2D;
@@ -11,17 +12,21 @@ public class KnightMovementController : MonoBehaviour {
     //Animator Condition Strings
     private String speed = "Speed";
     private String isCrouching = "IsCrouching";
+    private String isjumping = "IsJumping";
 
-    private float joystickOffset = 0.2f;
-    private float joystickJumpCrouchOffset = 0.5f;
-    private float horizontalMove = 0;
-    public float runSpeed = 40f;
+    private float joystickOffset = 0.2f;  //Offset until player moves
+    private float joystickJumpCrouchOffset = 0.8f;  //Offset until player jumps/crouches
+    private bool canJump = true;          //prevents instant rejump on landing  
+    private float nextJumpDelay = 1f;    //set delay between jumps
+    private float horizontalMove = 0;        
+    private float runSpeed = 20f;
 
     private bool jump = false;
     private bool crouch = false;
+
    
+
     private void Update() {
-        
         
 
         if (joystick.Horizontal >= joystickOffset) {
@@ -39,15 +44,18 @@ public class KnightMovementController : MonoBehaviour {
 
         float jumpCrouchCheck = joystick.Vertical;
 
-        if (jumpCrouchCheck >= joystickJumpCrouchOffset) {
+        if (jumpCrouchCheck >= joystickJumpCrouchOffset && canJump) {
             jump = true;
+            animator.SetBool(isjumping, jump);
+            StartCoroutine(ReJumpDelay());
+
         }
         
 
         if (jumpCrouchCheck <= -joystickJumpCrouchOffset) {
             crouch = true;
             animator.SetBool(isCrouching, crouch);
-            //animator.SetFloat(speed, Mathf.Abs(horizontalMove));
+            
         }
         else {
             crouch = false;
@@ -57,6 +65,8 @@ public class KnightMovementController : MonoBehaviour {
     }
 
     public void OnLanding() {
+        animator.SetBool(isjumping, false);
+        
         
     }
 
@@ -68,7 +78,22 @@ public class KnightMovementController : MonoBehaviour {
 
     private void FixedUpdate() {
         Controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        if (jump == true) {
+           // canJump = Time.time + nextJumpDelay;
+        }
         jump = false;
 
     }
+
+    
+    //Prevents player from jumping again instantly upon landing
+    IEnumerator ReJumpDelay() {
+        
+        yield return new WaitForSeconds(nextJumpDelay);
+        canJump = false;
+        yield return  new WaitForSeconds(nextJumpDelay);
+        canJump = true;
+    }
+
+   
 }

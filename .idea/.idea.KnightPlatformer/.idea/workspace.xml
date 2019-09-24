@@ -1,22 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="" />
+    <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/KnightSwordIdle1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/KnightSwordIdle1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordCrawl/SwardCrawl4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordIdle/KnightSwordIdle2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordIdle/KnightSwordIdle2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordStab/SwordStab4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordSwing/SwordSwing4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Knight/SwordWalk/SwordWalk4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/JoystickController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" />
       </list>
     </option>
@@ -26,6 +58,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -68,7 +101,7 @@
       <updated>1568889403613</updated>
       <workItem from="1568889409966" duration="613000" />
       <workItem from="1568976000522" duration="4661000" />
-      <workItem from="1569314382948" duration="5046000" />
+      <workItem from="1569314382948" duration="12102000" />
     </task>
     <servers />
   </component>
@@ -77,6 +110,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>

@@ -31,6 +31,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CameraController.cs" t="Include" />
           <e p="CharacterController2D.cs" t="Include" />
           <e p="KnightMovementController.cs" t="Include" />
         </e>
