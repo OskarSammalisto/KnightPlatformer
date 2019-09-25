@@ -8,6 +8,9 @@ public class KnightMovementController : MonoBehaviour {
     public CharacterController2D Controller2D;
     public Joystick joystick;
     public Animator animator;
+    public BoxCollider2D boxCollider;
+    public LayerMask groundLayer;
+    public GameObject ceilingCheck;
     
     //Animator Condition Strings
     private String speed = "Speed";
@@ -15,7 +18,8 @@ public class KnightMovementController : MonoBehaviour {
     private String isjumping = "IsJumping";
 
     private float joystickOffset = 0.2f;  //Offset until player moves
-    private float joystickJumpCrouchOffset = 0.8f;  //Offset until player jumps/crouches
+    private float joystickJumpOffset = 0.8f;  //Offset until player jumps/crouches
+    private  float joystickCrouchOffset = 0.5f;
     private bool canJump = true;          //prevents instant rejump on landing  
     private float nextJumpDelay = 1f;    //set delay between jumps
     private float horizontalMove = 0;        
@@ -44,7 +48,7 @@ public class KnightMovementController : MonoBehaviour {
 
         float jumpCrouchCheck = joystick.Vertical;
 
-        if (jumpCrouchCheck >= joystickJumpCrouchOffset && canJump) {
+        if (jumpCrouchCheck >= joystickJumpOffset && canJump) {
             jump = true;
             animator.SetBool(isjumping, jump);
             StartCoroutine(ReJumpDelay());
@@ -52,14 +56,24 @@ public class KnightMovementController : MonoBehaviour {
         }
         
 
-        if (jumpCrouchCheck <= -joystickJumpCrouchOffset) {
+        if (jumpCrouchCheck <= -joystickCrouchOffset) {
             crouch = true;
+            boxCollider.enabled = false;
             animator.SetBool(isCrouching, crouch);
             
         }
         else {
-            crouch = false;
-            animator.SetBool(isCrouching, crouch);
+            if (Physics2D.OverlapCircle(ceilingCheck.transform.position,0.2f, groundLayer)) {
+                crouch = true;
+                boxCollider.enabled = false;
+                animator.SetBool(isCrouching, crouch);
+            }
+            else {
+                crouch = false;
+                boxCollider.enabled = true;
+                animator.SetBool(isCrouching, crouch);
+            }
+            
         }
 
     }
@@ -71,6 +85,7 @@ public class KnightMovementController : MonoBehaviour {
     }
 
     public void OnCrouching(bool crouching) {
+        Debug.Log("onCrouching");
         animator.SetBool(isCrouching, crouching);
         animator.SetFloat(speed, Mathf.Abs(horizontalMove));
     }
@@ -78,9 +93,6 @@ public class KnightMovementController : MonoBehaviour {
 
     private void FixedUpdate() {
         Controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        if (jump == true) {
-           // canJump = Time.time + nextJumpDelay;
-        }
         jump = false;
 
     }
