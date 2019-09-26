@@ -5,10 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/KnightSwordIdle1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/KnightSwordIdle1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/KnightSwordStab.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/KnightSwordStab.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwordJump.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwordJump/SwordJump1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwordJump/SwordJump1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwordJump/SwordJump2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwordJump/SwordJump2.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwordController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwordController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,9 +27,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SwordController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -34,6 +39,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" />
         <option value="$PROJECT_DIR$/Assets/SwordController.cs" />
+        <option value="$PROJECT_DIR$/Assets/HitStateBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" />
       </list>
     </option>
@@ -88,7 +95,9 @@
       <workItem from="1568976000522" duration="4661000" />
       <workItem from="1569314382948" duration="12731000" />
       <workItem from="1569348859396" duration="3165000" />
-      <workItem from="1569405180893" duration="6079000" />
+      <workItem from="1569405180893" duration="9716000" />
+      <workItem from="1569431826133" duration="2856000" />
+      <workItem from="1569491996610" duration="6009000" />
     </task>
     <servers />
   </component>

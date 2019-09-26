@@ -17,9 +17,11 @@ public class SwordController : MonoBehaviour {
 
     public GameObject knight;
     private Animator knightAnimator;
+    private KnightMovementController knightMovementController;
 
     private void Start() {
         knightAnimator = knight.GetComponent<Animator>();
+        knightMovementController = knight.GetComponent<KnightMovementController>();
     }
 
     void Update() {
@@ -48,11 +50,13 @@ public class SwordController : MonoBehaviour {
                         if (touchPosition.x >= startingX +stabOffset) {
                             if (slash) {
                                 knightAnimator.SetTrigger(slashSword);
+                                knightMovementController.Swing();
                                 fingerID = -1;
                                 slash = false;
                             }
                             else {
                                 knightAnimator.SetTrigger(stab);
+                                knightMovementController.Stab();
                                 fingerID = -1;
                                 slash = false;
                             }
