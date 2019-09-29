@@ -25,13 +25,14 @@ public class PlayerController : MonoBehaviour
     public List<Transform> swingUpList = new List<Transform>();
    
     
-    //Animator Condition Strings....
+    //Animator Condition Hash Strings....
     private int speedHash = Animator.StringToHash("speed");
     private int isCrouchingHash = Animator.StringToHash("isCrouching");
     private int stabHash = Animator.StringToHash("stab");
     private int isJumpingHash = Animator.StringToHash("isJumping");
     private int swingUpHash = Animator.StringToHash("swingUp");
     private int swingDownHash = Animator.StringToHash("swingDown");
+    private int shieldUpHash = Animator.StringToHash("shieldUp");
     
     
     //movement settings
@@ -45,6 +46,12 @@ public class PlayerController : MonoBehaviour
 
     private bool jump = false;
     private bool crouch = false;
+    private bool canUseShield = true;
+    [SerializeField]
+    private bool shieldActive = false;
+    private float shieldActiveTime = 0.6f;
+    private float shieldWaitTime = 1f;
+    
     
     
     
@@ -125,35 +132,88 @@ public class PlayerController : MonoBehaviour
 //    }
 
 //Starts stab attack
-//    public void Stab() {
-//        RaycastHit2D hit = Physics2D.Linecast(stabStart.transform.position, stabEnd.transform.position, enemyLayer);
-//
-//        if (hit.collider != null) {
-//            
-//            EnemyHit(hit);
-//        }
-//
-//    }
-//    
-//    //Start swing attack
-//    public void Swing() {
-//        
-//        for (int i = 0; i < swingList.Count-1; i++) {
-//            RaycastHit2D hit = Physics2D.Linecast(swingList[i].position, swingList[i + 1].position, enemyLayer);
-//            
-//            if (hit.collider != null) {
-//              
-//                EnemyHit(hit);
-//                break;
-//            }
-//        }
-//    }
+    public void Stab() {
+
+        Debug.Log("stab");
+        if (!crouch) {
+            animator.SetTrigger(stabHash);
+            RaycastHit2D hit = Physics2D.Linecast(stabStart.transform.position, stabEnd.transform.position, enemyLayer);
+
+            if (hit.collider != null) {
+                EnemyHit(hit);
+            }
+        }
+        else if (crouch) {
+            animator.SetTrigger(stabHash);
+            RaycastHit2D hit = Physics2D.Linecast(crouchStabStart.transform.position, crouchStabEnd.transform.position, enemyLayer);
+
+            if (hit.collider != null) {
+                EnemyHit(hit); 
+            }
+        }
+        
+    }
+
+    //Start swing attack
+    public void upSwing() {
+        
+        Debug.Log("upSwing");
+        animator.SetTrigger(swingUpHash);
+        for (int i = 0; i < swingUpList.Count-1; i++) {
+            RaycastHit2D hit = Physics2D.Linecast(swingUpList[i].position, swingUpList[i + 1].position, enemyLayer);
+            
+            if (hit.collider != null) {
+              
+                EnemyHit(hit);
+                break;
+            }
+        }
+    }
+    
+    public void downSwing() {
+        
+        Debug.Log("downswing");
+        animator.SetTrigger(swingDownHash);
+        
+        for (int i = 0; i < swingDownList.Count-1; i++) {
+            RaycastHit2D hit = Physics2D.Linecast(swingDownList[i].position, swingDownList[i + 1].position, enemyLayer);
+            
+            if (hit.collider != null) {
+              
+                EnemyHit(hit);
+                break;
+            }
+        }
+    }
+    
+    
+    
 //
 //    private void EnemyHit(RaycastHit2D hit) {
 //        hit.collider.gameObject.GetComponent<EnemyController>().GotHit();
-//    }
    
+   
+    private void EnemyHit(RaycastHit2D hit) {
+        hit.collider.gameObject.GetComponent<EnemyController>().GotHit();
+    }
     
-    
+    public void shieldUp() {
+        if (canUseShield) {
+            animator.SetTrigger(shieldUpHash);
+            shieldActive = true;
+            StartCoroutine(secondShieldDelay());
+        }
+        
+    }
+
+
+    IEnumerator secondShieldDelay() {
+        canUseShield = false;
+        yield return new WaitForSeconds(shieldActiveTime);
+        shieldActive = false;
+        yield return new WaitForSeconds(shieldWaitTime);
+        canUseShield = true;
+
+    }
    
 }

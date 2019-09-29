@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class SwordController : MonoBehaviour {
     
@@ -9,19 +10,22 @@ public class SwordController : MonoBehaviour {
     private float startingX;
     private float startingY;
     private float stabOffset = 0.5f;
-    private float slashOffset = 0.5f;
+    private float slashOffset = 1f;
     private bool slash = false;
+    private bool upSlash = false;
 
+    
+    
     private String stab = "Stab";
     private String slashSword = "Slash";
 
     public GameObject knight;
-    private Animator knightAnimator;
-    private KnightMovementController knightMovementController;
+   // private Animator knightAnimator;
+    private PlayerController playerController;
 
     private void Start() {
-        knightAnimator = knight.GetComponent<Animator>();
-        knightMovementController = knight.GetComponent<KnightMovementController>();
+        //knightAnimator = knight.GetComponent<Animator>();
+        playerController = knight.GetComponent<PlayerController>();
     }
 
     void Update() {
@@ -46,24 +50,34 @@ public class SwordController : MonoBehaviour {
                     if (touch.fingerId == fingerID) {
                         if (touchPosition.y >= startingY + slashOffset) {
                             slash = true;
+                            upSlash = false;
+                        }
+
+                        if (touchPosition.y <= startingY - slashOffset) {
+                            upSlash = true;
+                            slash = false;
                         }
                         if (touchPosition.x >= startingX +stabOffset) {
                             if (slash) {
-                                knightAnimator.SetTrigger(slashSword);
-                                knightMovementController.Swing();
+                                
+                                playerController.downSwing();
                                 fingerID = -1;
-                                slash = false;
+                              //  slash = false;
+                            }
+                            else if (upSlash) {
+                                playerController.upSwing();
+                                fingerID = -1;
+                                //slash = false;
                             }
                             else {
-                                knightAnimator.SetTrigger(stab);
-                                knightMovementController.Stab();
+                                playerController.Stab();
                                 fingerID = -1;
-                                slash = false;
+                              //  slash = false;
                             }
                             
                         }else if (touchPosition.x <= startingX -stabOffset) {
                             fingerID = -1;
-                            slash = false;
+                           // slash = false;
                         }
                     }
                     
@@ -71,6 +85,7 @@ public class SwordController : MonoBehaviour {
                 case TouchPhase.Ended:
                     fingerID = -1;
                     slash = false;
+                    upSlash = false;
                     break;
                 
             }

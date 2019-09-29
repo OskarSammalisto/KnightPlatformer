@@ -37,6 +37,7 @@
           <e p="HitStateBehaviour.cs" t="Include" />
           <e p="KnightMovementController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="ShieldController.cs" t="Include" />
           <e p="SwordController.cs" t="Include" />
         </e>
       </e>

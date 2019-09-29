@@ -25,6 +25,7 @@ public class KnightMovementController : MonoBehaviour {
     private String speed = "Speed";
     private String isCrouching = "IsCrouching";
     private String isjumping = "IsJumping";
+    
 
     private float joystickOffset = 0.2f;  //Offset until player moves
     private float joystickJumpOffset = 0.8f;  //Offset until player jumps/crouches
@@ -145,5 +146,7 @@ public class KnightMovementController : MonoBehaviour {
         hit.collider.gameObject.GetComponent<EnemyController>().GotHit();
     }
 
+
+   
    
 }
