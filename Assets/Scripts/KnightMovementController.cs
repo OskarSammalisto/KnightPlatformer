@@ -30,7 +30,7 @@ public class KnightMovementController : MonoBehaviour {
     private float joystickJumpOffset = 0.8f;  //Offset until player jumps/crouches
     private  float joystickCrouchOffset = 0.5f;
     private bool canJump = true;          //prevents instant rejump on landing  
-    private float nextJumpDelay = 1f;    //set delay between jumps
+    private float nextJumpDelay = 1.2f;    //set delay between jumps
     private float horizontalMove = 0;        
     private float runSpeed = 15f;
 
