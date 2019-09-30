@@ -4,14 +4,10 @@
     <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerShieldUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerShieldUp.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerrSwordIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerrSwordIdle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NewKnightSword_ShieldInFront.psb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/NewKnightSword_ShieldInFront.psb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NewKnightSword_ShieldInFront.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/NewKnightSword_ShieldInFront.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +21,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwordController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,9 +43,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -106,7 +104,7 @@
       <workItem from="1569431826133" duration="2856000" />
       <workItem from="1569491996610" duration="6552000" />
       <workItem from="1569662221438" duration="611000" />
-      <workItem from="1569751903028" duration="9608000" />
+      <workItem from="1569751903028" duration="16793000" />
     </task>
     <servers />
   </component>

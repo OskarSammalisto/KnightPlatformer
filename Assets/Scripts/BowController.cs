@@ -6,6 +6,8 @@ public class BowController : MonoBehaviour {
 
     public GameObject knight;
     private PlayerController playerController;
+
+    public GameObject arrow;
     
     private int fingerID = -1;
     private float startingX;
@@ -37,13 +39,14 @@ public class BowController : MonoBehaviour {
                     break;
                 case TouchPhase.Moved:
                     if (touch.fingerId == fingerID) {
-                       Debug.Log(touchPosition.y - startingY);
-                        
+                      // Debug.Log(touchPosition.y - startingY);
+
                     }
                     break;
                 case TouchPhase.Ended:
                     if (touch.fingerId == fingerID) {
-                        playerController.ShootBow(touchPosition.y - startingY);
+                        
+                        playerController.ShootBow();
 
                         fingerID = -1;
                     }

@@ -20,7 +20,7 @@ public class SwichWeaponController : MonoBehaviour {
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
-                        playerController.SwichWeapon();
+                        playerController.SwitchWeapon();
                     }
                     break;
             }

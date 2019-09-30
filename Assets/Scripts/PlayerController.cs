@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
+[SuppressMessage("ReSharper", "FieldCanBeMadeReadOnly.Local")]
 public class PlayerController : MonoBehaviour
 {
     public CharacterController2D Controller2D;
@@ -11,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
     public GameObject ceilingCheck;
+    public GameObject arrow;
     
     
     //Points for sword stab linecast
@@ -20,7 +23,11 @@ public class PlayerController : MonoBehaviour
     public GameObject crouchStabStart;
     public GameObject crouchStabEnd;
     
-    //List of points for sword swing linecast
+    //points for arrow
+    public Transform arrowStartPoint;
+    
+    
+    //List of points for sword swing lineCast
     public List<Transform> swingDownList = new List<Transform>();
     public List<Transform> swingUpList = new List<Transform>();
    
@@ -64,6 +71,7 @@ public class PlayerController : MonoBehaviour
     }
     
     void Update() {
+
         if (joystick.Horizontal >= joystickOffset) {
             horizontalMove = runSpeed;
             animator.SetFloat(speedHash, Mathf.Abs(horizontalMove));
@@ -74,7 +82,7 @@ public class PlayerController : MonoBehaviour
         }
         else {
             horizontalMove = 0;
-            //animator.SetFloat(speed, Mathf.Abs(horizontalMove));
+            animator.SetFloat(speedHash, Mathf.Abs(horizontalMove));
         }
 
         float jumpCrouchCheck = joystick.Vertical;
@@ -111,7 +119,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         Controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
-
     }
     
     public void OnLanding() {
@@ -210,16 +217,20 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void ShootBow(float angle) {
+    public void ShootBow() {
         if (bowActive) {
+            
             animator.SetTrigger(shootForwardHash);
+            Instantiate(arrow);
+            arrow.transform.position = arrowStartPoint.position;
+
         }
     }
 
-    public void SwichWeapon() {
+    public void SwitchWeapon() {
         bowActive = !bowActive;
-        
         animator.SetBool(bowHash, bowActive);
+
         
     }
 
@@ -232,6 +243,10 @@ public class PlayerController : MonoBehaviour
         canUseShield = true;
 
     }
+
+//    public Transform arrowStartPosition() {
+//        return arrowStartPoint;
+//    }
     
     
    
