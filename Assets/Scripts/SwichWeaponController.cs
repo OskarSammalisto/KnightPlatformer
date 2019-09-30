@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldController : MonoBehaviour
-{
+public class SwichWeaponController : MonoBehaviour {
     public GameObject knight;
     private PlayerController playerController;
+    
     void Start() {
         playerController = knight.GetComponent<PlayerController>();
     }
 
    
     void Update() {
-        
-        
-        
-         
         foreach (Touch touch in Input.touches) {
             
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
@@ -24,13 +20,16 @@ public class ShieldController : MonoBehaviour
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
-                                    playerController.ShieldUp();
+                        playerController.SwichWeapon();
                     }
                     break;
             }
         
             
         }
+        
+        
+        
         
     }
 }

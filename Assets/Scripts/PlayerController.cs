@@ -33,9 +33,12 @@ public class PlayerController : MonoBehaviour
     private int swingUpHash = Animator.StringToHash("swingUp");
     private int swingDownHash = Animator.StringToHash("swingDown");
     private int shieldUpHash = Animator.StringToHash("shieldUp");
-    
-    
-    //movement settings
+    //bow
+    private int bowHash = Animator.StringToHash("bow");
+    private int shootForwardHash = Animator.StringToHash("shootForward");
+
+
+        //movement settings
     private float joystickOffset = 0.2f;  //Offset until player moves
     private float joystickJumpOffset = 0.8f;  //Offset until player jumps/crouches
     private  float joystickCrouchOffset = 0.5f;
@@ -51,6 +54,7 @@ public class PlayerController : MonoBehaviour
     private bool shieldActive = false;
     private float shieldActiveTime = 0.6f;
     private float shieldWaitTime = 1f;
+    private bool bowActive = false;
     
     
     
@@ -197,17 +201,30 @@ public class PlayerController : MonoBehaviour
         hit.collider.gameObject.GetComponent<EnemyController>().GotHit();
     }
     
-    public void shieldUp() {
+    public void ShieldUp() {
         if (canUseShield) {
             animator.SetTrigger(shieldUpHash);
             shieldActive = true;
-            StartCoroutine(secondShieldDelay());
+            StartCoroutine(SecondShieldDelay());
         }
         
     }
 
+    public void ShootBow(float angle) {
+        if (bowActive) {
+            animator.SetTrigger(shootForwardHash);
+        }
+    }
 
-    IEnumerator secondShieldDelay() {
+    public void SwichWeapon() {
+        bowActive = !bowActive;
+        
+        animator.SetBool(bowHash, bowActive);
+        
+    }
+
+
+    IEnumerator SecondShieldDelay() {
         canUseShield = false;
         yield return new WaitForSeconds(shieldActiveTime);
         shieldActive = false;
@@ -215,5 +232,7 @@ public class PlayerController : MonoBehaviour
         canUseShield = true;
 
     }
+    
+    
    
 }
