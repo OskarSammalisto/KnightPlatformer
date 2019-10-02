@@ -142,8 +142,10 @@ public class KnightMovementController : MonoBehaviour {
         }
     }
 
+    
+    //TODO does zero damage!!!
     private void EnemyHit(RaycastHit2D hit) {
-        hit.collider.gameObject.GetComponent<EnemyController>().GotHit();
+        hit.collider.gameObject.GetComponent<EnemyController>().GotHit(0);
     }
 
 

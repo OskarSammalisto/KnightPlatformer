@@ -16,8 +16,8 @@ public class SwordController : MonoBehaviour {
 
     
     
-    private String stab = "Stab";
-    private String slashSword = "Slash";
+//    private String stab = "Stab";
+//    private String slashSword = "Slash";
 
     public GameObject knight;
    // private Animator knightAnimator;
@@ -60,12 +60,12 @@ public class SwordController : MonoBehaviour {
                         if (touchPosition.x >= startingX +stabOffset) {
                             if (slash) {
                                 
-                                playerController.downSwing();
+                                playerController.DownSwing();
                                 fingerID = -1;
                               //  slash = false;
                             }
                             else if (upSlash) {
-                                playerController.upSwing();
+                                playerController.UpSwing();
                                 fingerID = -1;
                                 //slash = false;
                             }

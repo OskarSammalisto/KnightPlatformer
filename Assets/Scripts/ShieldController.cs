@@ -12,10 +12,7 @@ public class ShieldController : MonoBehaviour
 
    
     void Update() {
-        
-        
-        
-         
+   
         foreach (Touch touch in Input.touches) {
             
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
@@ -24,12 +21,11 @@ public class ShieldController : MonoBehaviour
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
-                                    playerController.ShieldUp();
+                        playerController.ShieldUp();
                     }
                     break;
             }
         
-            
         }
         
     }

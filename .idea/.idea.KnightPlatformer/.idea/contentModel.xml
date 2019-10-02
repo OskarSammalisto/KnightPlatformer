@@ -35,6 +35,7 @@
           <e p="BowController.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="CharacterController2D.cs" t="Include" />
+          <e p="EnemyBlueKnightWalkStateController.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
           <e p="HitStateBehaviour.cs" t="Include" />
           <e p="KnightMovementController.cs" t="Include" />

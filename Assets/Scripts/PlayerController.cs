@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask enemyLayer;
     public GameObject ceilingCheck;
-    public GameObject arrow;
+    public GameObject arrowPrefab;
     
     
     //Points for sword stab linecast
@@ -33,10 +33,12 @@ public class PlayerController : MonoBehaviour
    
     
     //Animator Condition Hash Strings....
+    //movement
     private int speedHash = Animator.StringToHash("speed");
     private int isCrouchingHash = Animator.StringToHash("isCrouching");
-    private int stabHash = Animator.StringToHash("stab");
     private int isJumpingHash = Animator.StringToHash("isJumping");
+    //Sword and Shield
+    private int stabHash = Animator.StringToHash("stab");
     private int swingUpHash = Animator.StringToHash("swingUp");
     private int swingDownHash = Animator.StringToHash("swingDown");
     private int shieldUpHash = Animator.StringToHash("shieldUp");
@@ -45,24 +47,31 @@ public class PlayerController : MonoBehaviour
     private int shootForwardHash = Animator.StringToHash("shootForward");
 
 
-        //movement settings
+    //movement settings
     private float joystickOffset = 0.2f;  //Offset until player moves
     private float joystickJumpOffset = 0.8f;  //Offset until player jumps/crouches
     private  float joystickCrouchOffset = 0.5f;
     private bool canJump = true;          //prevents instant rejump on landing  
-    private float nextJumpDelay = 1.2f;    //set delay between jumps
+    private float nextJumpDelay = 1.5f;    //set delay between jumps
     private float horizontalMove = 0;        
     private float runSpeed = 15f;
 
     private bool jump = false;
     private bool crouch = false;
     private bool canUseShield = true;
+    
+    //weapon settings
     [SerializeField]
     private bool shieldActive = false;
     private float shieldActiveTime = 0.6f;
     private float shieldWaitTime = 1f;
     private bool bowActive = false;
+    private float arrowMaxVelocity = 6f;
+    private float weaponDamage = 1; 
     
+    //health settings
+    [SerializeField]
+    private float health = 100f;
     
     
     
@@ -90,7 +99,7 @@ public class PlayerController : MonoBehaviour
         if (jumpCrouchCheck >= joystickJumpOffset && canJump) {
             jump = true;
             animator.SetBool(isJumpingHash, jump);
-//            StartCoroutine(ReJumpDelay());
+            StartCoroutine(ReJumpDelay());
 
         }
         
@@ -133,83 +142,81 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat(speedHash, Mathf.Abs(horizontalMove));
     }
 
-    
-//    IEnumerator ReJumpDelay() {
-//        
-//        yield return new WaitForSeconds(nextJumpDelay);
-//        canJump = false;
-//        yield return  new WaitForSeconds(nextJumpDelay);
-//        canJump = true;
-//    }
+    //prevents instant rejump upon landing
+    IEnumerator ReJumpDelay() {
+        
+        //yield return new WaitForSeconds(nextJumpDelay);
+        canJump = false;
+        yield return  new WaitForSeconds(nextJumpDelay);
+        canJump = true;
+    }
 
-//Starts stab attack
+    //Starts stab attack
     public void Stab() {
 
-        Debug.Log("stab");
-        if (!crouch) {
-            animator.SetTrigger(stabHash);
-            RaycastHit2D hit = Physics2D.Linecast(stabStart.transform.position, stabEnd.transform.position, enemyLayer);
+        if (!bowActive) {
+         
+            if (!crouch) {
+                animator.SetTrigger(stabHash);
+                RaycastHit2D hit = Physics2D.Linecast(stabStart.transform.position, stabEnd.transform.position, enemyLayer);
 
-            if (hit.collider != null) {
-                EnemyHit(hit);
+                if (hit.collider != null) {
+                    EnemyHit(hit);
+                }
+            }
+            else if (crouch) {
+                animator.SetTrigger(stabHash);
+                RaycastHit2D hit = Physics2D.Linecast(crouchStabStart.transform.position, crouchStabEnd.transform.position, enemyLayer);
+
+                if (hit.collider != null) {
+                    EnemyHit(hit); 
+                }
             }
         }
-        else if (crouch) {
-            animator.SetTrigger(stabHash);
-            RaycastHit2D hit = Physics2D.Linecast(crouchStabStart.transform.position, crouchStabEnd.transform.position, enemyLayer);
-
-            if (hit.collider != null) {
-                EnemyHit(hit); 
-            }
-        }
-        
     }
 
     //Start swing attack
-    public void upSwing() {
-        
-        Debug.Log("upSwing");
-        animator.SetTrigger(swingUpHash);
-        for (int i = 0; i < swingUpList.Count-1; i++) {
-            RaycastHit2D hit = Physics2D.Linecast(swingUpList[i].position, swingUpList[i + 1].position, enemyLayer);
+    public void UpSwing() {
+
+        if (!bowActive) {
             
-            if (hit.collider != null) {
-              
-                EnemyHit(hit);
-                break;
+            animator.SetTrigger(swingUpHash);
+            for (int i = 0; i < swingUpList.Count - 1; i++) {
+                RaycastHit2D hit = Physics2D.Linecast(swingUpList[i].position, swingUpList[i + 1].position, enemyLayer);
+
+                if (hit.collider != null) {
+
+                    EnemyHit(hit);
+                    break;
+                }
             }
         }
     }
     
-    public void downSwing() {
-        
-        Debug.Log("downswing");
-        animator.SetTrigger(swingDownHash);
-        
-        for (int i = 0; i < swingDownList.Count-1; i++) {
-            RaycastHit2D hit = Physics2D.Linecast(swingDownList[i].position, swingDownList[i + 1].position, enemyLayer);
-            
-            if (hit.collider != null) {
-              
-                EnemyHit(hit);
-                break;
+    public void DownSwing() {
+
+
+        if (!bowActive) {
+
+            animator.SetTrigger(swingDownHash);
+
+            for (int i = 0; i < swingDownList.Count - 1; i++) {
+                RaycastHit2D hit =
+                    Physics2D.Linecast(swingDownList[i].position, swingDownList[i + 1].position, enemyLayer);
+
+                if (hit.collider != null) {
+
+                    EnemyHit(hit);
+                    break;
+                }
             }
         }
     }
-    
-    
-    
-//
-//    private void EnemyHit(RaycastHit2D hit) {
-//        hit.collider.gameObject.GetComponent<EnemyController>().GotHit();
+  
    
-   
-    private void EnemyHit(RaycastHit2D hit) {
-        hit.collider.gameObject.GetComponent<EnemyController>().GotHit();
-    }
     
     public void ShieldUp() {
-        if (canUseShield) {
+        if (canUseShield && !bowActive) {
             animator.SetTrigger(shieldUpHash);
             shieldActive = true;
             StartCoroutine(SecondShieldDelay());
@@ -217,21 +224,27 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void ShootBow() {
+    public void ShootBow(float speedX,float speedY) {
+
+        
+        if (speedX >= arrowMaxVelocity) {
+            speedX = arrowMaxVelocity;
+        }
+        
         if (bowActive) {
-            
             animator.SetTrigger(shootForwardHash);
-            Instantiate(arrow);
-            arrow.transform.position = arrowStartPoint.position;
+           GameObject arrow = Instantiate(arrowPrefab, arrowStartPoint.position, arrowStartPoint.transform.rotation);
+           //arrow.GetComponent<Rigidbody2D>().velocity = transform.right * -10f;
+           arrow.GetComponent<Rigidbody2D>().velocity = new Vector2( speedX * 2 * transform.right.x , -speedY * 2);
+           // arrow.transform.position = arrowStartPoint.position;
 
         }
     }
+    
 
     public void SwitchWeapon() {
         bowActive = !bowActive;
         animator.SetBool(bowHash, bowActive);
-
-        
     }
 
 
@@ -243,11 +256,19 @@ public class PlayerController : MonoBehaviour
         canUseShield = true;
 
     }
-
-//    public Transform arrowStartPosition() {
-//        return arrowStartPoint;
-//    }
     
-    
-   
+    //Registers incoming damage
+    public void TakeDamage(float damage) {  //TODO make shield active dependent on direction facing, ie not active if hit in back
+        if (!shieldActive) {
+            health -= damage;
+        }
+        
+        if (health <= 0) {
+            Debug.Log("DED");
+            health = 100f;
+        }
+    }
+     private void EnemyHit(RaycastHit2D hit) {
+            hit.collider.gameObject.GetComponent<EnemyController>().GotHit(weaponDamage);
+     }
 }
