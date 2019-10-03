@@ -34,12 +34,16 @@ public class ArrowController : MonoBehaviour {
     
     void FixedUpdate()
     {
+        
         if (!hasHitGround) {
             transform.Rotate(new Vector3(0, 0, 360.0f - Vector3.Angle(transform.right, rb.velocity.normalized)));
         }
 
         if (rb.velocity.x <= 0.1f && rb.velocity.x >= -0.1f) {  //TODO: make this better!!! Ok it's better but maybe it can be even better.
             hasHitGround = true;
+            arrowDamage = 0;
+            
+
         }
         
     }
@@ -49,8 +53,9 @@ public class ArrowController : MonoBehaviour {
 
         
         EnemyController enemyController = objHit.GetComponent<EnemyController>();
-        if (enemyController != null) {
+        if (enemyController != null && arrowDamage > 0.1f) {
             enemyController.GotHit(arrowDamage);
+            
             Destroy(gameObject);
         }
        

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,10 @@ public class CameraController : MonoBehaviour {
     private Vector3 velocity = Vector3.zero;
     public Transform player;
 
-   
+    private void Start() {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void Update() {
         if (player) {
             Vector3 position = Camera.main.WorldToViewportPoint(player.position);

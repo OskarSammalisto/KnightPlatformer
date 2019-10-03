@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController2D Controller2D;
     public Joystick joystick;
+    public GameObject joystickGameObject;
     public Animator animator;
     public BoxCollider2D boxCollider;
     public LayerMask groundLayer;
@@ -74,13 +75,40 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float health = 100f;
     private int lives;
-    
-    
+
+    private static PlayerController _instance;
     
     void Start() {
         
+        DontDestroyOnLoad(gameObject);
+        
     }
-    
+
+    public static PlayerController Instance { get
+        {
+            if (_instance == null)
+            {
+                _instance = Instantiate(Resources.Load<GameObject>("PlayerKnight")).GetComponent<PlayerController>();
+            }
+
+            return _instance;
+        }
+
+    }
+        
+    private void Awake()
+    {
+
+        if (_instance != null && _instance != this) {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     void Update() {
 
         if (joystick.Horizontal >= joystickOffset) {
