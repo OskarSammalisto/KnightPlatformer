@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask enemyLayer;
     public GameObject ceilingCheck;
     public GameObject arrowPrefab;
+    public GameObject berserkerParticles;
     
     
     //Points for sword stab linecast
@@ -69,7 +70,14 @@ public class PlayerController : MonoBehaviour
     private bool bowActive = false;
     private int arrowsInQuiver = 5;
     private float arrowMaxVelocity = 6f;
-    private float weaponDamage = 1; 
+    
+    //powerups
+    private float berserkerDuration = 30;
+    
+    //sword damage
+    private float normalDamage = 1;
+    private float weaponDamage = 1;
+    private float berserkerDamage = 2;
     
     //health settings
     [SerializeField]
@@ -79,7 +87,7 @@ public class PlayerController : MonoBehaviour
     private static PlayerController _instance;
     
     void Start() {
-        
+        berserkerParticles.SetActive(false);
         DontDestroyOnLoad(gameObject);
         
     }
@@ -314,4 +322,19 @@ public class PlayerController : MonoBehaviour
      public int ArrowsRemaining() {
          return arrowsInQuiver;
      }
+     
+     
+     //power ups
+     public void Berserker() {
+         StartCoroutine(GoBerserk());
+     }
+
+     private IEnumerator GoBerserk() {
+         weaponDamage = berserkerDamage;
+         berserkerParticles.SetActive(true);
+         yield return new WaitForSeconds(berserkerDuration);
+         berserkerParticles.SetActive(false);
+         weaponDamage = normalDamage;
+     }
+     
 }
