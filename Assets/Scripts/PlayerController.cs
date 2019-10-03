@@ -66,12 +66,14 @@ public class PlayerController : MonoBehaviour
     private float shieldActiveTime = 0.6f;
     private float shieldWaitTime = 1f;
     private bool bowActive = false;
+    private int arrowsInQuiver = 5;
     private float arrowMaxVelocity = 6f;
     private float weaponDamage = 1; 
     
     //health settings
     [SerializeField]
     private float health = 100f;
+    private int lives;
     
     
     
@@ -231,7 +233,8 @@ public class PlayerController : MonoBehaviour
             speedX = arrowMaxVelocity;
         }
         
-        if (bowActive) {
+        if (bowActive && !crouch && arrowsInQuiver > 0) {
+            arrowsInQuiver--;
             animator.SetTrigger(shootForwardHash);
            GameObject arrow = Instantiate(arrowPrefab, arrowStartPoint.position, arrowStartPoint.transform.rotation);
            //arrow.GetComponent<Rigidbody2D>().velocity = transform.right * -10f;
@@ -243,8 +246,11 @@ public class PlayerController : MonoBehaviour
     
 
     public void SwitchWeapon() {
-        bowActive = !bowActive;
-        animator.SetBool(bowHash, bowActive);
+        if (!crouch) {
+            bowActive = !bowActive;
+            animator.SetBool(bowHash, bowActive);
+        }
+        
     }
 
 
@@ -265,10 +271,19 @@ public class PlayerController : MonoBehaviour
         
         if (health <= 0) {
             Debug.Log("DED");
-            health = 100f;
+            health = 100f; //TODO remove godmode and add death animation + respawn
         }
     }
      private void EnemyHit(RaycastHit2D hit) {
             hit.collider.gameObject.GetComponent<EnemyController>().GotHit(weaponDamage);
+     }
+
+     public void PickUpArrows(int arrowsPickedUp) {
+         arrowsInQuiver += arrowsPickedUp;
+     }
+     
+     
+     public int ArrowsRemaining() {
+         return arrowsInQuiver;
      }
 }

@@ -4,20 +4,24 @@
     <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/EnemyAnimContr.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/EnemyAnimContr.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/EnemyBlueKnightAnimComtroller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/EnemyBlueKnightAnimComtroller.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerShieldUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerShieldUp.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordCrouch.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordCrouch.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordCrouchStab.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordCrouchStab.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordCrouchWalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordCrouchWalk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordJump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordJump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordStabFaster.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordStabFaster.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordSwingDown.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordSwingDown.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordSwingUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordSwingUp.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordWalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordWalk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordwalk2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordwalk2.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyBlueKnightWalkStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyBlueKnightWalkStateController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowItemController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,10 +60,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBlueKnightWalkStateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
@@ -121,7 +128,8 @@
       <workItem from="1569914825089" duration="2060000" />
       <workItem from="1569935375172" duration="7270000" />
       <workItem from="1569998717030" duration="1803000" />
-      <workItem from="1570011383831" duration="5028000" />
+      <workItem from="1570011383831" duration="10491000" />
+      <workItem from="1570085388542" duration="5517000" />
     </task>
     <servers />
   </component>

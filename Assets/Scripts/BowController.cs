@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BowController : MonoBehaviour {
 
     public GameObject knight;
     private PlayerController playerController;
+    public TMP_Text arrowsRemaining;
     
     private int fingerID = -1;
     private float startingX;
@@ -19,6 +22,8 @@ public class BowController : MonoBehaviour {
 
    
     void Update() {
+
+        arrowsRemaining.text = playerController.ArrowsRemaining().ToString();
 
         foreach (Touch touch in Input.touches) {
             
@@ -43,7 +48,6 @@ public class BowController : MonoBehaviour {
                     if (touch.fingerId == fingerID) {
                         
                         playerController.ShootBow( touchPosition.x - startingX,touchPosition.y - startingY);
-                        Debug.Log(touchPosition.y - startingY);
                         fingerID = -1;
                     }
                     break;

@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyBlueKnightWalkStateController : StateMachineBehaviour {
     private CharacterController2D characterController;
     private EnemyController enemyController;
-    float moveSpeed = 0.3f;
-    private float direction = 1;
+    float moveSpeed = 0.1f;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         characterController = animator.GetComponent<CharacterController2D>();

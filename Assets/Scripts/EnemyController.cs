@@ -8,21 +8,28 @@ public class EnemyController : MonoBehaviour {
     [HideInInspector]
     public Animator animator;
 
+    public BoxCollider2D trigger;
+
     public Transform groundCheckStart;
     public Transform groundCheckEnd;
     public LayerMask avoidCollisionLayer;
 
     //animator hash
     private int stabHash = Animator.StringToHash("stab");
+    private int gotHit = Animator.StringToHash("GotHit");
     
     private float health;
-    private float damage = 50f;
+    private float damage = 20f;
     private int direction = 1;
     private bool canFlip = true;
 
-    private int gotHit = Animator.StringToHash("GotHit");
+    private float secondAttackDelay = 1.5f;
+    private bool canTrigger = true;
+
+    
     void Start() {
 
+        canTrigger = true;
         health = 5f;
         particles.SetActive(false);
         animator = GetComponent<Animator>();
@@ -34,6 +41,7 @@ public class EnemyController : MonoBehaviour {
 
    
     void Update() {
+        
 
         if (canFlip) {
             RaycastHit2D hit = Physics2D.Linecast(groundCheckStart.position, groundCheckEnd.position, avoidCollisionLayer);
@@ -57,8 +65,10 @@ public class EnemyController : MonoBehaviour {
     }
     
 
-    public void GotHit(float damage) {
-        health -= damage;
+    public void GotHit(float damageDone) {
+        canTrigger = false;
+        StartCoroutine(SecondAttackDelay());
+        health -= damageDone;
         animator.SetTrigger(gotHit);
         if (health <= 0) {
             Destroy(gameObject);
@@ -74,12 +84,22 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("trigger enter");
+       
         PlayerController playerController = other.GetComponent<PlayerController>();
-        if (playerController != null) {
+        if (playerController != null && canTrigger) {
+            canTrigger = false;
+            trigger.enabled = false;
+            StartCoroutine(SecondAttackDelay());
             animator.SetTrigger(stabHash);
-            playerController.TakeDamage(damage); //TODO: make this a line cast os similar, does double dmg now. perhaps delay attack a bit.
+            playerController.TakeDamage(damage);
         }
         
+    }
+
+    //prevents double attack and enables second attack if player stays in trigger
+    IEnumerator SecondAttackDelay() {
+        yield return new WaitForSeconds(secondAttackDelay);
+        canTrigger = true;
+        trigger.enabled = true;
     }
 }
