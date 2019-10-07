@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public GameObject ceilingCheck;
     public GameObject arrowPrefab;
     public GameObject berserkerParticles;
+    public HealthBarController healthBarController;
     
     
     //Points for sword stab linecast
@@ -83,14 +84,16 @@ public class PlayerController : MonoBehaviour
     //health settings
     [SerializeField]
     private float health = 100f;
+    private float maxHealth = 100f;
     private int lives;
 
     private static PlayerController _instance;
     
     void Start() {
+        health = maxHealth;
         berserkerParticles.SetActive(false);
         DontDestroyOnLoad(gameObject);
-        
+        SetHealthBar();
     }
 
     public static PlayerController Instance { get
@@ -189,6 +192,11 @@ public class PlayerController : MonoBehaviour
         yield return  new WaitForSeconds(nextJumpDelay);
         canJump = true;
     }
+    
+    //set health bar
+    private void SetHealthBar() {
+        healthBarController.SetHealthBar(health / 100);
+    }
 
     //Starts stab attack
     public void Stab() {
@@ -275,14 +283,13 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger(shootForwardHash);
            GameObject arrow = Instantiate(arrowPrefab, arrowStartPoint.position, arrowStartPoint.transform.rotation);
            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2( speedX * 2 * transform.right.x , -speedY * 2);
+           arrowsInQuiver--;
+           
            if (fireArrowsInQuiver > 0) {
                ArrowController arrowController = arrow.GetComponent<ArrowController>();
                arrowController.IncreaseDamage();
                arrowController.StartParticles();
                fireArrowsInQuiver--;
-           }
-           else {
-               arrowsInQuiver--;
            }
            
         }
@@ -311,12 +318,19 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage) {  //TODO make shield active dependent on direction facing, ie not active if hit in back
         if (!shieldActive) {
             health -= damage;
+            SetHealthBar();
         }
         
         if (health <= 0) {
             Debug.Log("DED");
             health = 100f; //TODO remove godmode and add death animation + respawn
         }
+    }
+
+    public void Instakill() {
+        health = 0;
+        SetHealthBar();
+        Debug.Log("instakilled");
     }
      private void EnemyHit(RaycastHit2D hit) {
             hit.collider.gameObject.GetComponent<EnemyController>().GotHit(weaponDamage);
@@ -330,12 +344,17 @@ public class PlayerController : MonoBehaviour
      public int ArrowsRemaining() {
          return arrowsInQuiver;
      }
+
+     public bool FireArrows() {
+         return fireArrowsInQuiver > 0;
+     }
      
      
      //power ups
      public void Berserker() {
          StartCoroutine(GoBerserk());
      }
+     
 
      private IEnumerator GoBerserk() {
          weaponDamage = berserkerDamage;
@@ -345,8 +364,16 @@ public class PlayerController : MonoBehaviour
          weaponDamage = normalDamage;
      }
 
+     public void GetHealth(float healthGiven) {
+         health += healthGiven;
+         if (health > maxHealth) {
+             health = maxHealth;
+         }
+         SetHealthBar();
+     }
      public void PickUpFireArrows(int fireArrowsPickedUp) {
          fireArrowsInQuiver += fireArrowsPickedUp;
+         arrowsInQuiver += fireArrowsPickedUp;
      }
      
 }

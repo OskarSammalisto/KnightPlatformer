@@ -25,6 +25,13 @@ public class BowController : MonoBehaviour {
 
         arrowsRemaining.text = playerController.ArrowsRemaining().ToString();
 
+        if (playerController.FireArrows()) {
+            arrowsRemaining.color = Color.red;
+        }
+        else {
+            arrowsRemaining.color = Color.white;
+        }
+
         foreach (Touch touch in Input.touches) {
             
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);

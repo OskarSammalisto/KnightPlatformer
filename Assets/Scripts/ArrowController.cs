@@ -60,7 +60,7 @@ public class ArrowController : MonoBehaviour {
         EnemyController enemyController = objHit.GetComponent<EnemyController>();
         if (enemyController != null && arrowDamage > 0.1f) {
             enemyController.GotHit(arrowDamage);
-            
+            Debug.Log("Enemy hit");
             Destroy(gameObject);
         }
        

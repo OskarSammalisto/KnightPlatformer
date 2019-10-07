@@ -41,6 +41,8 @@
           <e p="EnemyController.cs" t="Include" />
           <e p="EventSystemController.cs" t="Include" />
           <e p="FireArrowItemController.cs" t="Include" />
+          <e p="HealthBarController.cs" t="Include" />
+          <e p="HeartController.cs" t="Include" />
           <e p="HitStateBehaviour.cs" t="Include" />
           <e p="KnightMovementController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
@@ -48,6 +50,7 @@
           <e p="SceneHandler.cs" t="Include" />
           <e p="ShieldController.cs" t="Include" />
           <e p="ShroomPowerupController.cs" t="Include" />
+          <e p="SpearController.cs" t="Include" />
           <e p="SwichWeaponController.cs" t="Include" />
           <e p="SwordController.cs" t="Include" />
           <e p="TempManagerScript.cs" t="Include" />
