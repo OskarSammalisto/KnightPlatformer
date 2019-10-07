@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour {
 
     public Transform groundCheckStart;
     public Transform groundCheckEnd;
+    public Transform frontGroundCheckEnd;
     public LayerMask avoidCollisionLayer;
 
     //animator hash
@@ -47,6 +48,18 @@ public class EnemyController : MonoBehaviour {
             RaycastHit2D hit = Physics2D.Linecast(groundCheckStart.position, groundCheckEnd.position, avoidCollisionLayer);
             
             if (hit.collider == null) {
+                canFlip = false;
+                
+                direction *= -1;
+                StartCoroutine(FlipDelay());
+                
+                        
+            }
+        }
+        if (canFlip) {
+            RaycastHit2D hit = Physics2D.Linecast(groundCheckStart.position, frontGroundCheckEnd.position, avoidCollisionLayer);
+            
+            if (hit.collider != null) {
                 canFlip = false;
                 
                 direction *= -1;

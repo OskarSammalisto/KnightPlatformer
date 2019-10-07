@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     private float shieldWaitTime = 1f;
     private bool bowActive = false;
     private int arrowsInQuiver = 5;
+    private int fireArrowsInQuiver = 0;
     private float arrowMaxVelocity = 6f;
     
     //powerups
@@ -270,13 +271,20 @@ public class PlayerController : MonoBehaviour
         }
         
         if (bowActive && !crouch && arrowsInQuiver > 0) {
-            arrowsInQuiver--;
+            
             animator.SetTrigger(shootForwardHash);
            GameObject arrow = Instantiate(arrowPrefab, arrowStartPoint.position, arrowStartPoint.transform.rotation);
-           //arrow.GetComponent<Rigidbody2D>().velocity = transform.right * -10f;
            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2( speedX * 2 * transform.right.x , -speedY * 2);
-           // arrow.transform.position = arrowStartPoint.position;
-
+           if (fireArrowsInQuiver > 0) {
+               ArrowController arrowController = arrow.GetComponent<ArrowController>();
+               arrowController.IncreaseDamage();
+               arrowController.StartParticles();
+               fireArrowsInQuiver--;
+           }
+           else {
+               arrowsInQuiver--;
+           }
+           
         }
     }
     
@@ -335,6 +343,10 @@ public class PlayerController : MonoBehaviour
          yield return new WaitForSeconds(berserkerDuration);
          berserkerParticles.SetActive(false);
          weaponDamage = normalDamage;
+     }
+
+     public void PickUpFireArrows(int fireArrowsPickedUp) {
+         fireArrowsInQuiver += fireArrowsPickedUp;
      }
      
 }

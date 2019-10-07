@@ -11,14 +11,19 @@ public class ArrowController : MonoBehaviour {
     public LayerMask enemyLayer;
     public LayerMask groundLayer;
 
+    public GameObject particleSystem;
+
     private float arrowLifeTime = 5f;
     private Rigidbody2D rb;
     private bool hasHitGround = false;
 
     //set arrow damage
-    private float arrowDamage = 1f; //possibly set to relative arrow speed + power up modifiers.
+    private float arrowDamage = 1f;
+    private float fireArrowDamage = 2f;
     
     void Start() {
+        particleSystem = gameObject.transform.GetChild(0).gameObject;
+        particleSystem.SetActive(false);
         rb = gameObject.GetComponent<Rigidbody2D>();
         Physics2D.IgnoreLayerCollision(11, 13, true);
         
@@ -59,5 +64,19 @@ public class ArrowController : MonoBehaviour {
             Destroy(gameObject);
         }
        
+    }
+
+    public void IncreaseDamage() {
+        arrowDamage = fireArrowDamage;
+    }
+
+    public void StartParticles() {
+        StartCoroutine(SetParticles());
+    }
+
+    //delay so particle system is initialized
+     IEnumerator SetParticles() {
+        yield return new WaitForSeconds(0.1f);
+        particleSystem.SetActive(true);
     }
 }
