@@ -4861,7 +4861,7 @@ GameObject:
   - component: {fileID: 306477993195069054}
   m_Layer: 12
   m_Name: EnemyBlueKnight
-  m_TagString: Untagged
+  m_TagString: BlueKnight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5022,6 +5022,9 @@ MonoBehaviour:
   avoidCollisionLayer:
     serializedVersion: 2
     m_Bits: 1024
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!114 &306477993195069055
 MonoBehaviour:
   m_ObjectHideFlags: 0

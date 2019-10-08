@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour
     //bow
     private int bowHash = Animator.StringToHash("bow");
     private int shootForwardHash = Animator.StringToHash("shootForward");
+    //death
+    private int deadHash = Animator.StringToHash("dead");
 
 
     //movement settings
@@ -66,8 +68,8 @@ public class PlayerController : MonoBehaviour
     //weapon settings
     [SerializeField]
     private bool shieldActive = false;
-    private float shieldActiveTime = 0.6f;
-    private float shieldWaitTime = 1f;
+    private float shieldActiveTime = 1.2f;
+    private float shieldWaitTime = 0.2f;
     private bool bowActive = false;
     private int arrowsInQuiver = 5;
     private int fireArrowsInQuiver = 0;
@@ -86,6 +88,11 @@ public class PlayerController : MonoBehaviour
     private float health = 100f;
     private float maxHealth = 100f;
     private int lives;
+    private bool dead = false;
+    
+    //enemy tag Strings
+    private string blueKnight = "BlueKnight";
+    private string fireMage = "FireMage"; 
 
     private static PlayerController _instance;
     
@@ -93,7 +100,7 @@ public class PlayerController : MonoBehaviour
         health = maxHealth;
         berserkerParticles.SetActive(false);
         DontDestroyOnLoad(gameObject);
-        SetHealthBar();
+        //SetHealthBar();
     }
 
     public static PlayerController Instance { get
@@ -168,7 +175,10 @@ public class PlayerController : MonoBehaviour
     }
     
     private void FixedUpdate() {
-        Controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        if (!dead) {
+            Controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        }
+        
         jump = false;
     }
     
@@ -195,13 +205,16 @@ public class PlayerController : MonoBehaviour
     
     //set health bar
     private void SetHealthBar() {
-        healthBarController.SetHealthBar(health / 100);
+        
+             healthBarController.SetHealthBar(health / 100);
+        
+       
     }
 
     //Starts stab attack
     public void Stab() {
 
-        if (!bowActive) {
+        if (!bowActive && ! dead) {
          
             if (!crouch) {
                 animator.SetTrigger(stabHash);
@@ -225,7 +238,7 @@ public class PlayerController : MonoBehaviour
     //Start swing attack
     public void UpSwing() {
 
-        if (!bowActive) {
+        if (!bowActive && !dead) {
             
             animator.SetTrigger(swingUpHash);
             for (int i = 0; i < swingUpList.Count - 1; i++) {
@@ -243,7 +256,7 @@ public class PlayerController : MonoBehaviour
     public void DownSwing() {
 
 
-        if (!bowActive) {
+        if (!bowActive && !dead) {
 
             animator.SetTrigger(swingDownHash);
 
@@ -263,10 +276,14 @@ public class PlayerController : MonoBehaviour
    
     
     public void ShieldUp() {
-        if (canUseShield && !bowActive) {
+        if (canUseShield && !bowActive && !dead) {
             animator.SetTrigger(shieldUpHash);
             shieldActive = true;
             StartCoroutine(SecondShieldDelay());
+        }
+
+        if (health <= 0) {
+            Respawn();   //TODO: remove this!!!!
         }
         
     }
@@ -278,7 +295,7 @@ public class PlayerController : MonoBehaviour
             speedX = arrowMaxVelocity;
         }
         
-        if (bowActive && !crouch && arrowsInQuiver > 0) {
+        if (bowActive && !crouch && arrowsInQuiver > 0 && !dead) {
             
             animator.SetTrigger(shootForwardHash);
            GameObject arrow = Instantiate(arrowPrefab, arrowStartPoint.position, arrowStartPoint.transform.rotation);
@@ -297,7 +314,7 @@ public class PlayerController : MonoBehaviour
     
 
     public void SwitchWeapon() {
-        if (!crouch) {
+        if (!crouch && !dead) {
             bowActive = !bowActive;
             animator.SetBool(bowHash, bowActive);
         }
@@ -318,22 +335,45 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage) {  //TODO make shield active dependent on direction facing, ie not active if hit in back
         if (!shieldActive) {
             health -= damage;
+            if (health < 0) {
+                health = 0;
+            }
             SetHealthBar();
         }
         
         if (health <= 0) {
             Debug.Log("DED");
-            health = 100f; //TODO remove godmode and add death animation + respawn
+            Die();
+            //health = 100f; //TODO remove godmode and add death animation + respawn
         }
     }
 
     public void Instakill() {
         health = 0;
         SetHealthBar();
+        Die();
         Debug.Log("instakilled");
     }
+
+    private void Die() {
+        animator.SetBool(deadHash, true);
+        dead = true;
+    }
      private void EnemyHit(RaycastHit2D hit) {
-            hit.collider.gameObject.GetComponent<EnemyController>().GotHit(weaponDamage);
+         string tag = hit.collider.gameObject.tag;
+         
+         switch (tag) {
+         case "BlueKnight":
+             hit.collider.gameObject.GetComponent<EnemyController>().GotHit(weaponDamage);
+             break;
+             
+         case "FireMage":
+             hit.collider.gameObject.GetComponent<FireMageController>().GotHit(weaponDamage);
+             break;
+             
+         }
+         
+            
      }
 
      public void PickUpArrows(int arrowsPickedUp) {
@@ -374,6 +414,14 @@ public class PlayerController : MonoBehaviour
      public void PickUpFireArrows(int fireArrowsPickedUp) {
          fireArrowsInQuiver += fireArrowsPickedUp;
          arrowsInQuiver += fireArrowsPickedUp;
+     }
+
+     private void Respawn() {
+         animator.SetBool(deadHash, false);
+         gameObject.transform.position = new Vector2(-7, -1);
+         health = maxHealth;
+         dead = false;
+         SetHealthBar();
      }
      
 }

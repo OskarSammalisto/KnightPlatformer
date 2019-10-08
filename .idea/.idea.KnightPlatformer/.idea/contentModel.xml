@@ -41,6 +41,8 @@
           <e p="EnemyController.cs" t="Include" />
           <e p="EventSystemController.cs" t="Include" />
           <e p="FireArrowItemController.cs" t="Include" />
+          <e p="FireballController.cs" t="Include" />
+          <e p="FireMageController.cs" t="Include" />
           <e p="HealthBarController.cs" t="Include" />
           <e p="HeartController.cs" t="Include" />
           <e p="HitStateBehaviour.cs" t="Include" />

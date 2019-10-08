@@ -10,6 +10,7 @@ public class HeartController : MonoBehaviour {
 
         if (playerController != null) {
             playerController.GetHealth(health);
+            Destroy(gameObject);
         }
         
     }

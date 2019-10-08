@@ -54,15 +54,32 @@ public class ArrowController : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D objHit) {
-       
+        string tag = objHit.tag;
+         
+        switch (tag) {
+            case "BlueKnight":
+                objHit.GetComponent<EnemyController>().GotHit(arrowDamage);
+                Destroy(gameObject);
+                break;
+             
+            case "FireMage":
+                objHit.GetComponent<FireMageController>().GotHit(arrowDamage);
+                Destroy(gameObject);
+                break;
+            default:
+                Destroy(gameObject);
+                break;
+             
+        }
 
         
-        EnemyController enemyController = objHit.GetComponent<EnemyController>();
-        if (enemyController != null && arrowDamage > 0.1f) {
-            enemyController.GotHit(arrowDamage);
-            Debug.Log("Enemy hit");
-            Destroy(gameObject);
-        }
+//        EnemyController enemyController = objHit.GetComponent<EnemyController>();
+//        if (enemyController != null && arrowDamage > 0.1f) {
+//            enemyController.GotHit(arrowDamage);
+//            Debug.Log("Enemy hit");
+//            Destroy(gameObject);
+//        }
+        
        
     }
 
