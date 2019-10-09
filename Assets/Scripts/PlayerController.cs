@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [SuppressMessage("ReSharper", "FieldCanBeMadeReadOnly.Local")]
 public class PlayerController : MonoBehaviour
@@ -65,12 +66,21 @@ public class PlayerController : MonoBehaviour
     private bool crouch = false;
     private bool canUseShield = true;
     
+    //weapon buttons
+    public GameObject shieldButton;
+    public GameObject swordButton;
+    public GameObject bowButton;
+
+
     //weapon settings
     [SerializeField]
     private bool shieldActive = false;
     private float shieldActiveTime = 1.2f;
     private float shieldWaitTime = 0.2f;
     private bool bowActive = false;
+    private bool canStab = true;
+    private float stabDelay = 0.5f;
+    private float secondStabDelay = 1f;
     private int arrowsInQuiver = 5;
     private int fireArrowsInQuiver = 0;
     private float arrowMaxVelocity = 6f;
@@ -99,6 +109,7 @@ public class PlayerController : MonoBehaviour
     void Start() {
         health = maxHealth;
         berserkerParticles.SetActive(false);
+        ToggleWeaponButtons();
         DontDestroyOnLoad(gameObject);
         //SetHealthBar();
     }
@@ -114,6 +125,18 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    
+    void OnEnable()
+    {
+        
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    
+    void OnDisable()
+    {
+      
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
         
     private void Awake()
     {
@@ -127,6 +150,14 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        transform.position = new Vector2(-8f, 0f); //TODO: eventually make this different for different levels, at least make a V2 variable.
+        
+    }
+    
+    
+    
 
     void Update() {
 
@@ -214,25 +245,40 @@ public class PlayerController : MonoBehaviour
     //Starts stab attack
     public void Stab() {
 
-        if (!bowActive && ! dead) {
-         
-            if (!crouch) {
-                animator.SetTrigger(stabHash);
-                RaycastHit2D hit = Physics2D.Linecast(stabStart.transform.position, stabEnd.transform.position, enemyLayer);
+        if (!bowActive && ! dead && canStab) {
+            canStab = false;
 
-                if (hit.collider != null) {
-                    EnemyHit(hit);
-                }
-            }
-            else if (crouch) {
-                animator.SetTrigger(stabHash);
-                RaycastHit2D hit = Physics2D.Linecast(crouchStabStart.transform.position, crouchStabEnd.transform.position, enemyLayer);
+            StartCoroutine(StabWithDelay());
+            StartCoroutine(SecondAttackDelay());
+        }
+    }
 
-                if (hit.collider != null) {
-                    EnemyHit(hit); 
-                }
+    IEnumerator StabWithDelay() {
+        yield return new WaitForSeconds(stabDelay);
+        if (!crouch) {
+            animator.SetTrigger(stabHash);
+            RaycastHit2D hit = Physics2D.Linecast(stabStart.transform.position, stabEnd.transform.position, enemyLayer);
+        
+            if (hit.collider != null) {
+                EnemyHit(hit);
             }
         }
+        else if (crouch) {
+            animator.SetTrigger(stabHash);
+            RaycastHit2D hit = Physics2D.Linecast(crouchStabStart.transform.position, crouchStabEnd.transform.position, enemyLayer);
+        
+            if (hit.collider != null) {
+                EnemyHit(hit); 
+            }
+        }
+        
+        
+    }
+
+    //prevents spamming attack
+    IEnumerator SecondAttackDelay() {
+        yield return new WaitForSeconds(secondStabDelay);
+        canStab = true;
     }
 
     //Start swing attack
@@ -295,8 +341,9 @@ public class PlayerController : MonoBehaviour
             speedX = arrowMaxVelocity;
         }
         
-        if (bowActive && !crouch && arrowsInQuiver > 0 && !dead) {
-            
+        if (bowActive && !crouch && arrowsInQuiver > 0 && !dead && canStab) {
+            canStab = false;
+            StartCoroutine(SecondAttackDelay());
             animator.SetTrigger(shootForwardHash);
            GameObject arrow = Instantiate(arrowPrefab, arrowStartPoint.position, arrowStartPoint.transform.rotation);
            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2( speedX * 2 * transform.right.x , -speedY * 2);
@@ -317,8 +364,22 @@ public class PlayerController : MonoBehaviour
         if (!crouch && !dead) {
             bowActive = !bowActive;
             animator.SetBool(bowHash, bowActive);
+            ToggleWeaponButtons();
         }
         
+    }
+
+    private void ToggleWeaponButtons() {
+        if (bowActive) {
+            bowButton.SetActive(true);
+            swordButton.SetActive(false);
+            shieldButton.SetActive(false);
+        }
+        else {
+            bowButton.SetActive(false);
+            swordButton.SetActive(true);
+            shieldButton.SetActive(true);
+        }
     }
 
 

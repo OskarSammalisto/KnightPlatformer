@@ -39,53 +39,54 @@ public class SwordController : MonoBehaviour {
             
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
+                        playerController.Stab();
                         fingerID = touch.fingerId;
-                        startingX = touchPosition.x;
-                        startingY = touchPosition.y;
+//                        startingX = touchPosition.x;
+//                        startingY = touchPosition.y;
 
                     }
                     
                     break;
-                case TouchPhase.Moved:
-                    if (touch.fingerId == fingerID) {
-                        if (touchPosition.y >= startingY + slashOffset) {
-                            slash = true;
-                            upSlash = false;
-                        }
-
-                        if (touchPosition.y <= startingY - slashOffset) {
-                            upSlash = true;
-                            slash = false;
-                        }
-                        if (touchPosition.x >= startingX +stabOffset) {
-                            if (slash) {
-                                
-                                playerController.DownSwing();
-                                fingerID = -1;
-                              //  slash = false;
-                            }
-                            else if (upSlash) {
-                                playerController.UpSwing();
-                                fingerID = -1;
-                                //slash = false;
-                            }
-                            else {
-                                playerController.Stab();
-                                fingerID = -1;
-                              //  slash = false;
-                            }
-                            
-                        }else if (touchPosition.x <= startingX -stabOffset) {
-                            fingerID = -1;
-                           // slash = false;
-                        }
-                    }
-                    
-                    break;
+//                case TouchPhase.Moved:
+//                    if (touch.fingerId == fingerID) {
+//                        if (touchPosition.y >= startingY + slashOffset) {
+//                            slash = true;
+//                            upSlash = false;
+//                        }
+//
+//                        if (touchPosition.y <= startingY - slashOffset) {
+//                            upSlash = true;
+//                            slash = false;
+//                        }
+//                        if (touchPosition.x >= startingX +stabOffset) {
+//                            if (slash) {
+//                                
+//                                playerController.DownSwing();
+//                                fingerID = -1;
+//                              //  slash = false;
+//                            }
+//                            else if (upSlash) {
+//                                playerController.UpSwing();
+//                                fingerID = -1;
+//                                //slash = false;
+//                            }
+//                            else {
+//                                playerController.Stab();
+//                                fingerID = -1;
+//                              //  slash = false;
+//                            }
+//                            
+//                        }else if (touchPosition.x <= startingX -stabOffset) {
+//                            fingerID = -1;
+//                           // slash = false;
+//                        }
+//                    }
+//                    
+//                    break;
                 case TouchPhase.Ended:
                     fingerID = -1;
-                    slash = false;
-                    upSlash = false;
+//                    slash = false;
+//                    upSlash = false;
                     break;
                 
             }

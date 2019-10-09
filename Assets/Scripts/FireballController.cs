@@ -9,7 +9,9 @@ public class FireballController : MonoBehaviour {
    
     
     void Start() {
-        Physics2D.IgnoreLayerCollision(12, 13, true);
+        Physics2D.IgnoreLayerCollision(12, 14, true);
+        Physics2D.IgnoreLayerCollision(11, 14, false);
+        
        
     }
 

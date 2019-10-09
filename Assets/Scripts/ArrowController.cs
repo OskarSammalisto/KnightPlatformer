@@ -10,6 +10,7 @@ public class ArrowController : MonoBehaviour {
     public LayerMask arrowLayer;
     public LayerMask enemyLayer;
     public LayerMask groundLayer;
+    
 
     public GameObject particleSystem;
 
@@ -22,10 +23,12 @@ public class ArrowController : MonoBehaviour {
     private float fireArrowDamage = 2f;
     
     void Start() {
+        
         particleSystem = gameObject.transform.GetChild(0).gameObject;
         particleSystem.SetActive(false);
         rb = gameObject.GetComponent<Rigidbody2D>();
         Physics2D.IgnoreLayerCollision(11, 13, true);
+        Physics2D.IgnoreLayerCollision(12, 13, false);
         
     }
 
@@ -45,8 +48,8 @@ public class ArrowController : MonoBehaviour {
         }
 
         if (rb.velocity.x <= 0.1f && rb.velocity.x >= -0.1f) {  //TODO: make this better!!! Ok it's better but maybe it can be even better.
-            hasHitGround = true;
-            arrowDamage = 0;
+              hasHitGround = true;
+//            arrowDamage = 0;
             
 
         }
@@ -54,12 +57,15 @@ public class ArrowController : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D objHit) {
+        
         string tag = objHit.tag;
-         
+        
         switch (tag) {
             case "BlueKnight":
+                
                 objHit.GetComponent<EnemyController>().GotHit(arrowDamage);
                 Destroy(gameObject);
+                Debug.Log("hit");
                 break;
              
             case "FireMage":

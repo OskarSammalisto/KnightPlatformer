@@ -13,16 +13,16 @@ public class SceneHandler : MonoBehaviour
         
         Scene scene = SceneManager.GetActiveScene();
 
-        if (scene.name == "TestScene")
+        if (scene.name == "Level1")
         {
-            async = SceneManager.LoadSceneAsync("SampleScene");
+            async = SceneManager.LoadSceneAsync("Level2");
             async.allowSceneActivation = false;
 
 
         }
-        else if (scene.name == "SampleScene")
+        else if (scene.name == "Level2")
         {
-            async = SceneManager.LoadSceneAsync("TestScene");
+            async = SceneManager.LoadSceneAsync("Level1");
             async.allowSceneActivation = false;
         }
 

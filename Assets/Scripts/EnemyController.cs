@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour {
     private int direction = 1;
     private bool canFlip = true;
 
-    private float secondAttackDelay = 1.5f;
+    private float secondAttackDelay = 2f;
     private bool canTrigger = true;
 
     
@@ -35,7 +35,8 @@ public class EnemyController : MonoBehaviour {
         health = 5f;
         particles.SetActive(false);
         animator = GetComponent<Animator>();
-        Physics2D.IgnoreLayerCollision(12, 12, true);
+//        Physics2D.IgnoreLayerCollision(12, 12, true);
+//        Physics2D.IgnoreLayerCollision(12, 13, false);
 
         HitStateBehaviour hitStateBehaviour = animator.GetBehaviour<HitStateBehaviour>();
         hitStateBehaviour.enemyController = this;
@@ -92,6 +93,7 @@ public class EnemyController : MonoBehaviour {
 
     public void GotHit(float damageDone) {
         canTrigger = false;
+        StopCoroutine(SecondAttackDelay());
         StartCoroutine(SecondAttackDelay());
         health -= damageDone;
         animator.SetTrigger(gotHit);
@@ -114,6 +116,7 @@ public class EnemyController : MonoBehaviour {
         if (playerController != null && canTrigger) {
             canTrigger = false;
             trigger.enabled = false;
+            StopCoroutine(SecondAttackDelay());
             StartCoroutine(SecondAttackDelay());
             animator.SetTrigger(stabHash);
             playerController.TakeDamage(damage);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwichWeaponController : MonoBehaviour {
     public GameObject knight;
+   
     private PlayerController playerController;
     
     void Start() {
