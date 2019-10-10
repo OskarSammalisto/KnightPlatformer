@@ -5,7 +5,8 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class FireballController : MonoBehaviour {
-    private float damage = 30;
+    private float damage = 10;
+    
    
     
     void Start() {

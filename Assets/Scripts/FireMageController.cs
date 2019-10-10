@@ -11,7 +11,9 @@ public class FireMageController : MonoBehaviour {
     private Animator animator;
     
     private int particleWaitTime = 1;
-
+    private float rotateDelay = 10f;
+    
+    
     private int fireHash = Animator.StringToHash("fire");
 
     private float velocityX;
@@ -32,12 +34,16 @@ public class FireMageController : MonoBehaviour {
 
    
     void Update() {
-        if (transform.position.x > player.transform.position.x) {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+        if (Time.deltaTime % rotateDelay < 1) {
+          if (transform.position.x > player.transform.position.x) {
+                      transform.localRotation = Quaternion.Euler(0, 0, 0);
+          }
+          else {
+              transform.localRotation = Quaternion.Euler(0, 180, 0);
+          }  
         }
-        else {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
+        
     }
 
     IEnumerator Shoot() {
@@ -55,12 +61,13 @@ public class FireMageController : MonoBehaviour {
             
         }
 
-        yield break;
+        
     }
     
 
     public void GotHit(float damage) {
         health -= damage;
+        
         StartCoroutine(HitEnumarator());
         if (health <= 0) {
             Destroy(gameObject);
@@ -72,5 +79,6 @@ public class FireMageController : MonoBehaviour {
         particleSystem.SetActive(true);
         yield return new WaitForSeconds(particleWaitTime);
         particleSystem.SetActive(false);
+       
     }
 }

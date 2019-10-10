@@ -16,6 +16,7 @@ public class BowController : MonoBehaviour {
     
     
     void Start() {
+        Physics2D.IgnoreLayerCollision(5, 13, true);
         playerController = knight.GetComponent<PlayerController>();
 
     }

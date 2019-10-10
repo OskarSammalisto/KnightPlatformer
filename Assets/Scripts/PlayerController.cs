@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
     private int isJumpingHash = Animator.StringToHash("isJumping");
     //Sword and Shield
     private int stabHash = Animator.StringToHash("stab");
-    private int swingUpHash = Animator.StringToHash("swingUp");
-    private int swingDownHash = Animator.StringToHash("swingDown");
+//    private int swingUpHash = Animator.StringToHash("swingUp");
+//    private int swingDownHash = Animator.StringToHash("swingDown");
     private int shieldUpHash = Animator.StringToHash("shieldUp");
     //bow
     private int bowHash = Animator.StringToHash("bow");
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     //movement settings
     private float joystickOffset = 0.2f;  //Offset until player moves
-    private float joystickJumpOffset = 0.8f;  //Offset until player jumps/crouches
+    private float joystickJumpOffset = 0.5f;  //Offset until player jumps/crouches
     private  float joystickCrouchOffset = 0.5f;
     private bool canJump = true;          //prevents instant rejump on landing  
     private float nextJumpDelay = 1.5f;    //set delay between jumps
@@ -89,20 +89,20 @@ public class PlayerController : MonoBehaviour
     private float berserkerDuration = 30;
     
     //sword damage
-    private float normalDamage = 1;
-    private float weaponDamage = 1;
-    private float berserkerDamage = 2;
+    private const float normalDamage = 2;
+    private float weaponDamage = 2;
+    private float berserkerDamage = 4;
     
     //health settings
     [SerializeField]
-    private float health = 100f;
+    private float health = 1000f;
     private float maxHealth = 100f;
     private int lives;
     private bool dead = false;
     
     //enemy tag Strings
-    private string blueKnight = "BlueKnight";
-    private string fireMage = "FireMage"; 
+//    private string blueKnight = "BlueKnight";
+//    private string fireMage = "FireMage"; 
 
     private static PlayerController _instance;
     
@@ -282,42 +282,42 @@ public class PlayerController : MonoBehaviour
     }
 
     //Start swing attack
-    public void UpSwing() {
-
-        if (!bowActive && !dead) {
-            
-            animator.SetTrigger(swingUpHash);
-            for (int i = 0; i < swingUpList.Count - 1; i++) {
-                RaycastHit2D hit = Physics2D.Linecast(swingUpList[i].position, swingUpList[i + 1].position, enemyLayer);
-
-                if (hit.collider != null) {
-
-                    EnemyHit(hit);
-                    break;
-                }
-            }
-        }
-    }
+//    public void UpSwing() {
+//
+//        if (!bowActive && !dead) {
+//            
+//            animator.SetTrigger(swingUpHash);
+//            for (int i = 0; i < swingUpList.Count - 1; i++) {
+//                RaycastHit2D hit = Physics2D.Linecast(swingUpList[i].position, swingUpList[i + 1].position, enemyLayer);
+//
+//                if (hit.collider != null) {
+//
+//                    EnemyHit(hit);
+//                    break;
+//                }
+//            }
+//        }
+//    }
     
-    public void DownSwing() {
-
-
-        if (!bowActive && !dead) {
-
-            animator.SetTrigger(swingDownHash);
-
-            for (int i = 0; i < swingDownList.Count - 1; i++) {
-                RaycastHit2D hit =
-                    Physics2D.Linecast(swingDownList[i].position, swingDownList[i + 1].position, enemyLayer);
-
-                if (hit.collider != null) {
-
-                    EnemyHit(hit);
-                    break;
-                }
-            }
-        }
-    }
+//    public void DownSwing() {
+//
+//
+//        if (!bowActive && !dead) {
+//
+//            animator.SetTrigger(swingDownHash);
+//
+//            for (int i = 0; i < swingDownList.Count - 1; i++) {
+//                RaycastHit2D hit =
+//                    Physics2D.Linecast(swingDownList[i].position, swingDownList[i + 1].position, enemyLayer);
+//
+//                if (hit.collider != null) {
+//
+//                    EnemyHit(hit);
+//                    break;
+//                }
+//            }
+//        }
+//    }
   
    
     
@@ -431,8 +431,13 @@ public class PlayerController : MonoBehaviour
          case "FireMage":
              hit.collider.gameObject.GetComponent<FireMageController>().GotHit(weaponDamage);
              break;
+         
+         case "Minotaur":
+             hit.collider.gameObject.GetComponent<MinotaurController>().GotHit(weaponDamage);
+             break;
              
          }
+         
          
             
      }

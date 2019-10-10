@@ -16,11 +16,13 @@ public class ArrowController : MonoBehaviour {
 
     private float arrowLifeTime = 5f;
     private Rigidbody2D rb;
-    private bool hasHitGround = false;
+
+    private bool triggered = false;
+    //private bool hasHitGround = false;
 
     //set arrow damage
-    private float arrowDamage = 1f;
-    private float fireArrowDamage = 2f;
+    private float arrowDamage = 3f;
+    private float fireArrowDamage = 6f;
     
     void Start() {
         
@@ -43,41 +45,49 @@ public class ArrowController : MonoBehaviour {
     void FixedUpdate()
     {
         
-        if (!hasHitGround) {
+       // if (!hasHitGround) {
             transform.Rotate(new Vector3(0, 0, 360.0f - Vector3.Angle(transform.right, rb.velocity.normalized)));
-        }
+        //}
 
-        if (rb.velocity.x <= 0.1f && rb.velocity.x >= -0.1f) {  //TODO: make this better!!! Ok it's better but maybe it can be even better.
-              hasHitGround = true;
-//            arrowDamage = 0;
-            
-
-        }
+//        if (rb.velocity.x <= 0.1f && rb.velocity.x >= -0.1f) {  //TODO: make this better!!! Ok it's better but maybe it can be even better.
+//              hasHitGround = true;
+////            arrowDamage = 0;
+//            
+//
+//        }
         
     }
 
     private void OnTriggerEnter2D(Collider2D objHit) {
+        if (!triggered) {
+            triggered = true; //prevents trigger double activation
         
-        string tag = objHit.tag;
+            string tag = objHit.tag;
         
-        switch (tag) {
-            case "BlueKnight":
+            switch (tag) {
+                case "BlueKnight":
                 
-                objHit.GetComponent<EnemyController>().GotHit(arrowDamage);
-                Destroy(gameObject);
-                Debug.Log("hit");
-                break;
+                    objHit.GetComponent<EnemyController>().GotHit(arrowDamage);
+                    Destroy(gameObject);
+                    Debug.Log("hit");
+                    break;
              
-            case "FireMage":
-                objHit.GetComponent<FireMageController>().GotHit(arrowDamage);
-                Destroy(gameObject);
-                break;
-            default:
-                Destroy(gameObject);
-                break;
+                case "FireMage":
+                    objHit.GetComponent<FireMageController>().GotHit(arrowDamage);
+                    Destroy(gameObject);
+                    break;
+                
+                case "Minotaur":
+                    objHit.GetComponent<MinotaurController>().GotHit(arrowDamage);
+                    Destroy(gameObject);
+                    break;
+                
+                default:
+                    Destroy(gameObject);
+                    break;
              
+            }
         }
-
         
 //        EnemyController enemyController = objHit.GetComponent<EnemyController>();
 //        if (enemyController != null && arrowDamage > 0.1f) {
