@@ -84,6 +84,8 @@ public class PlayerController : MonoBehaviour
     private int arrowsInQuiver = 5;
     private int fireArrowsInQuiver = 0;
     private float arrowMaxVelocity = 6f;
+
+    private int hitForce = 150;
     
     //powerups
     private float berserkerDuration = 30;
@@ -95,7 +97,7 @@ public class PlayerController : MonoBehaviour
     
     //health settings
     [SerializeField]
-    private float health = 1000f;
+    private float health = 100f;
     private float maxHealth = 100f;
     private int lives;
     private bool dead = false;
@@ -421,19 +423,24 @@ public class PlayerController : MonoBehaviour
         dead = true;
     }
      private void EnemyHit(RaycastHit2D hit) {
-         string tag = hit.collider.gameObject.tag;
-         
-         switch (tag) {
+          GameObject objHit = hit.collider.gameObject;
+          string objTag = objHit.tag;
+        
+         switch (objTag) {
          case "BlueKnight":
-             hit.collider.gameObject.GetComponent<EnemyController>().GotHit(weaponDamage);
+             objHit.GetComponent<EnemyController>().GotHit(weaponDamage);
+             objHit.GetComponent<Rigidbody2D>().AddForce(-transform.right * hitForce );
+             
              break;
              
          case "FireMage":
-             hit.collider.gameObject.GetComponent<FireMageController>().GotHit(weaponDamage);
+             objHit.GetComponent<FireMageController>().GotHit(weaponDamage);
+             objHit.GetComponent<Rigidbody2D>().AddForce(-transform.right * hitForce);
              break;
          
          case "Minotaur":
-             hit.collider.gameObject.GetComponent<MinotaurController>().GotHit(weaponDamage);
+             objHit.GetComponent<MinotaurController>().GotHit(weaponDamage);
+             objHit.GetComponent<Rigidbody2D>().AddForce(-transform.right * hitForce);
              break;
              
          }

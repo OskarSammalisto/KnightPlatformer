@@ -9,7 +9,9 @@ public class MinotaurController : MonoBehaviour {
     private Animator animator;
     private GameObject player;
     private PlayerController playerController;
+    private Rigidbody2D playerRB;
     public BoxCollider2D trigger;
+    public BoxCollider2D normalCollider;
     
     //less update rotation
     private float rotateDelay = 10;
@@ -28,7 +30,8 @@ public class MinotaurController : MonoBehaviour {
     private bool dead;
     
     //damage
-    private float damage = 10f;
+    private float damage = 20f;
+    private int hitForce = 700;
     
     //attack radius transforms
     public GameObject att1;
@@ -48,6 +51,7 @@ public class MinotaurController : MonoBehaviour {
         animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
+        playerRB = player.GetComponent<Rigidbody2D>();
     }
 
    
@@ -87,14 +91,19 @@ public class MinotaurController : MonoBehaviour {
 
         if (hit.collider != null) {
             playerController.TakeDamage(damage);
+            KnockBack();
             
         }
         else if (hit2.collider != null) {
             playerController.TakeDamage(damage);
-           
+            KnockBack();
         }
         
         
+    }
+
+    private void KnockBack() {
+        playerRB.AddForce(transform.right * hitForce);
     }
 
     private void Attack() {
@@ -134,8 +143,9 @@ public class MinotaurController : MonoBehaviour {
         animator.SetTrigger(deadTriggerHash);
         dead = true;
         trigger.enabled = false;
-        Physics2D.IgnoreLayerCollision(12, 11, true);
-        
+        normalCollider.enabled = false;
+        //Physics2D.IgnoreLayerCollision(12, 11, true);
+
         //suspend object activity
     }
     

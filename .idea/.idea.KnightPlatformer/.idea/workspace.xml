@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Minotaur - Sprite Sheet_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Minotaur - Sprite Sheet_0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MinotaurJump.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MinotaurJump.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DoorController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DoorController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/EnemyBlueKnight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/EnemyBlueKnight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/FireMage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/FireMage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/Minotaur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/Minotaur.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireballController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireballController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Minotaur/Minotaur - Sprite Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Minotaur/Minotaur - Sprite Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,16 +77,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/DoorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" />
         <option value="$PROJECT_DIR$/Assets/MinotaurIdleStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/MinotaurWalkState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireballController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -166,7 +153,7 @@
       <workItem from="1570085388542" duration="19189000" />
       <workItem from="1570428083731" duration="26617000" />
       <workItem from="1570603274113" duration="7226000" />
-      <workItem from="1570690481854" duration="12714000" />
+      <workItem from="1570690481854" duration="16025000" />
     </task>
     <servers />
   </component>

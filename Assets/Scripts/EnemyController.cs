@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour {
     private int gotHit = Animator.StringToHash("GotHit");
     
     private float health;
-    private float damage = 20f;
+    private float damage = 10f;
     private int direction = 1;
     private bool canFlip = true;
 

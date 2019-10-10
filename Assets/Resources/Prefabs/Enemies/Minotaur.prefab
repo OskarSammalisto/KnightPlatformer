@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 5338316235356361522}
   - component: {fileID: 5338316235356361525}
   - component: {fileID: 5338316235356361527}
+  - component: {fileID: 1823569413}
   m_Layer: 12
   m_Name: Minotaur
   m_TagString: Minotaur
@@ -192,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 5338316235356361527}
+  normalCollider: {fileID: 5338316235356361521}
   health: 15
   att1: {fileID: 481009526}
   att2: {fileID: 1480444380}
@@ -291,3 +293,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.30451632, y: 0.41000003}
   m_EdgeRadius: 0
+--- !u!58 &1823569413
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338316235356361518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.066886544, y: -0.048}
+  serializedVersion: 2
+  m_Radius: 0.0020300448
