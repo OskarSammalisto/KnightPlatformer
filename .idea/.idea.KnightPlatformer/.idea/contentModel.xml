@@ -30,8 +30,6 @@
             </e>
           </e>
         </e>
-        <e p="MinotaurIdleStateController.cs" t="Include" />
-        <e p="MinotaurWalkState.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ArrowController.cs" t="Include" />
           <e p="ArrowItemController.cs" t="Include" />
@@ -46,21 +44,27 @@
           <e p="FireArrowItemController.cs" t="Include" />
           <e p="FireballController.cs" t="Include" />
           <e p="FireMageController.cs" t="Include" />
+          <e p="GhoulStateBehaviour.cs" t="Include" />
           <e p="HealthBarController.cs" t="Include" />
           <e p="HeartController.cs" t="Include" />
           <e p="HitStateBehaviour.cs" t="Include" />
           <e p="KnightMovementController.cs" t="Include" />
+          <e p="MenuGhoulController.cs" t="Include" />
           <e p="MinotaurController.cs" t="Include" />
+          <e p="MinotaurIdleStateController.cs" t="Include" />
+          <e p="MinotaurWalkState.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="SceneButtonController.cs" t="Include" />
           <e p="SceneHandler.cs" t="Include" />
           <e p="ShieldController.cs" t="Include" />
           <e p="ShroomPowerupController.cs" t="Include" />
           <e p="SpearController.cs" t="Include" />
+          <e p="StartMenubutton.cs" t="Include" />
           <e p="SwichWeaponController.cs" t="Include" />
           <e p="SwordController.cs" t="Include" />
           <e p="TempManagerScript.cs" t="Include" />
         </e>
+        <e p="StartTextController.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

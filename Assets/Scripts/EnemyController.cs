@@ -24,6 +24,8 @@ public class EnemyController : MonoBehaviour {
     private float damage = 10f;
     private int direction = 1;
     private bool canFlip = true;
+    
+    private int hitForce = 700;
 
     private float secondAttackDelay = 2f;
     private bool canTrigger = true;
@@ -120,6 +122,7 @@ public class EnemyController : MonoBehaviour {
             StartCoroutine(SecondAttackDelay());
             animator.SetTrigger(stabHash);
             playerController.TakeDamage(damage);
+            playerController.GetComponent<Rigidbody2D>().AddForce(transform.right *hitForce);
         }
         
     }

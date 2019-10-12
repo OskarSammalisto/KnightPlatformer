@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController2D Controller2D;
     public Joystick joystick;
-    public GameObject joystickGameObject;
     public Animator animator;
     public BoxCollider2D boxCollider;
     public LayerMask groundLayer;
@@ -32,8 +31,8 @@ public class PlayerController : MonoBehaviour
     
     
     //List of points for sword swing lineCast
-    public List<Transform> swingDownList = new List<Transform>();
-    public List<Transform> swingUpList = new List<Transform>();
+//    public List<Transform> swingDownList = new List<Transform>();
+//    public List<Transform> swingUpList = new List<Transform>();
    
     
     //Animator Condition Hash Strings....
@@ -79,7 +78,7 @@ public class PlayerController : MonoBehaviour
     private float shieldWaitTime = 0.2f;
     private bool bowActive = false;
     private bool canStab = true;
-    private float stabDelay = 0.5f;
+    private float stabDelay = 0.25f;
     private float secondStabDelay = 1f;
     private int arrowsInQuiver = 5;
     private int fireArrowsInQuiver = 0;
@@ -256,9 +255,10 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator StabWithDelay() {
+        animator.SetTrigger(stabHash);
         yield return new WaitForSeconds(stabDelay);
         if (!crouch) {
-            animator.SetTrigger(stabHash);
+           // animator.SetTrigger(stabHash);
             RaycastHit2D hit = Physics2D.Linecast(stabStart.transform.position, stabEnd.transform.position, enemyLayer);
         
             if (hit.collider != null) {
@@ -266,7 +266,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         else if (crouch) {
-            animator.SetTrigger(stabHash);
+          //  animator.SetTrigger(stabHash);
             RaycastHit2D hit = Physics2D.Linecast(crouchStabStart.transform.position, crouchStabEnd.transform.position, enemyLayer);
         
             if (hit.collider != null) {

@@ -6719,6 +6719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3361425608107253046}
+  - component: {fileID: 3361425608107253055}
   - component: {fileID: 3361425608107253050}
   - component: {fileID: 3361425608107253049}
   - component: {fileID: 3361425608107253048}
@@ -6726,7 +6727,6 @@ GameObject:
   - component: {fileID: 3361425608107253047}
   - component: {fileID: 3361425608107253045}
   - component: {fileID: 3361425608107253051}
-  - component: {fileID: 3361425608107253055}
   m_Layer: 11
   m_Name: PlayerKnight
   m_TagString: Player
@@ -6767,6 +6767,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &3361425608107253055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3361425608107253040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e7b7c9a77b7864db9254651d61d083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller2D: {fileID: 3361425608107253051}
+  joystick: {fileID: 0}
+  animator: {fileID: 3361425608107253047}
+  boxCollider: {fileID: 3361425608107253048}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  ceilingCheck: {fileID: 3361425606390625455}
+  arrowPrefab: {fileID: 8095107322448436788, guid: 5ce2256d1f23cf449a6107aea80dbcac,
+    type: 3}
+  berserkerParticles: {fileID: 3361425607632723093}
+  healthBarController: {fileID: 0}
+  stabStart: {fileID: 3361425607699965967}
+  stabEnd: {fileID: 3361425607044921975}
+  crouchStabStart: {fileID: 3361425607906743206}
+  crouchStabEnd: {fileID: 3361425608004460381}
+  arrowStartPoint: {fileID: 3361425606498472695}
+  shieldButton: {fileID: 0}
+  swordButton: {fileID: 0}
+  bowButton: {fileID: 0}
+  shieldActive: 0
+  health: 100
 --- !u!50 &3361425608107253050
 Rigidbody2D:
   serializedVersion: 4
@@ -6786,7 +6823,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 9000ef4465eb12b4381627d592b886d1, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &3361425608107253049
 CircleCollider2D:
@@ -6955,50 +6992,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3361425608107253055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3361425608107253040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e7b7c9a77b7864db9254651d61d083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Controller2D: {fileID: 3361425608107253051}
-  joystick: {fileID: 0}
-  joystickGameObject: {fileID: 0}
-  animator: {fileID: 3361425608107253047}
-  boxCollider: {fileID: 3361425608107253048}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 4096
-  ceilingCheck: {fileID: 3361425606390625455}
-  arrowPrefab: {fileID: 8095107322448436788, guid: 5ce2256d1f23cf449a6107aea80dbcac,
-    type: 3}
-  berserkerParticles: {fileID: 3361425607632723093}
-  stabStart: {fileID: 3361425607699965967}
-  stabEnd: {fileID: 3361425607044921975}
-  crouchStabStart: {fileID: 3361425607906743206}
-  crouchStabEnd: {fileID: 3361425608004460381}
-  arrowStartPoint: {fileID: 3361425606498472695}
-  swingDownList:
-  - {fileID: 3361425606771308591}
-  - {fileID: 3361425607516657052}
-  - {fileID: 3361425608066887008}
-  - {fileID: 3361425607659028260}
-  swingUpList:
-  - {fileID: 3361425606442375384}
-  - {fileID: 3361425608257485603}
-  - {fileID: 3361425607577198677}
-  - {fileID: 3361425608127909518}
-  shieldActive: 0
-  health: 100
 --- !u!1 &3361425608127909519
 GameObject:
   m_ObjectHideFlags: 0
