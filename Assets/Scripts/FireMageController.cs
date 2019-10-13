@@ -15,6 +15,7 @@ public class FireMageController : MonoBehaviour {
     
     
     private int fireHash = Animator.StringToHash("fire");
+    private int deadHash = Animator.StringToHash("dead");
 
     private float velocityX;
     private float xMin = 10f;
@@ -66,16 +67,19 @@ public class FireMageController : MonoBehaviour {
     
 
     public void GotHit(float damage) {
-        health -= damage;
         
-        StartCoroutine(HitEnumarator());
+        health -= damage;
+
         if (health <= 0) {
-            Destroy(gameObject);
+            animator.SetTrigger(deadHash);
+        }
+        else {
+           StartCoroutine(HitEnumerator()); 
         }
         
     }
 
-    IEnumerator HitEnumarator() {
+    IEnumerator HitEnumerator() {
         particleSystem.SetActive(true);
         yield return new WaitForSeconds(particleWaitTime);
         particleSystem.SetActive(false);

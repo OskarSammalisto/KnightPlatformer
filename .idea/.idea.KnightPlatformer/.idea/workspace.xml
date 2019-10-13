@@ -4,20 +4,10 @@
     <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerKnight.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordStabFaster.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordStabFaster.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerSwordwalk2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSwordwalk2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinotaurIdleStateController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinotaurIdleStateController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinotaurWalkState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinotaurWalkState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/PlayerKnight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/PlayerKnight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/FireMage.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/FireMage.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Minotaur - Sprite Sheet_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Minotaur - Sprite Sheet_0.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeartController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FireMageDieState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Prefabs/Projectiles/Arrow.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BowController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,13 +39,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShroomPowerupController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Prefabs/Projectiles/fireball1.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StartTextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpearController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowItemController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -90,7 +81,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" />
         <option value="$PROJECT_DIR$/Assets/MinotaurIdleStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/MinotaurWalkState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireballController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
@@ -101,6 +91,9 @@
         <option value="$PROJECT_DIR$/Assets/GhoulStateBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/StartTextController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FireballSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/FireMageDieState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" />
       </list>
     </option>
   </component>
@@ -169,7 +162,8 @@
       <workItem from="1570603274113" duration="7226000" />
       <workItem from="1570690481854" duration="16315000" />
       <workItem from="1570789192284" duration="4095000" />
-      <workItem from="1570871826705" duration="3855000" />
+      <workItem from="1570871826705" duration="4373000" />
+      <workItem from="1570951016875" duration="3311000" />
     </task>
     <servers />
   </component>
