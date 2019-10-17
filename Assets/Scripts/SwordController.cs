@@ -25,6 +25,7 @@ public class SwordController : MonoBehaviour {
 
     private void Start() {
         //knightAnimator = knight.GetComponent<Animator>();
+        Physics2D.IgnoreLayerCollision(12, 15, true);
         playerController = knight.GetComponent<PlayerController>();
     }
 

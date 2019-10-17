@@ -4,10 +4,493 @@
     <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/FireMage.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/FireMage.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Minotaur - Sprite Sheet_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Minotaur - Sprite Sheet_0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FireMageDieState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FireMageDieState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/BoxBgTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/BoxBgTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/bg-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/column.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/column.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/tileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Environment/tileset.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Scenes/demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Scenes/demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Attack.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Attack/angel-attack-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Attack/angel-attack-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Attack/angel-attack-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Attack/angel-attack-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Attack/angel-attack-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Attack/angel-attack-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Angel-Idle/angel8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Burning-Ghoul/burning-ghoul8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Fire/fire9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Enemies/Wizard-Idle/wizard-idle-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Enemy-Death/Enemy-Death-7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Fireball.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Fireball/fireball1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Fireball/fireball1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Fireball/fireball2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Fireball/fireball2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Fireball/fireball3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Misc/Fireball/fireball3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch-kick5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/crouch2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/fall1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/fall1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/fall2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/fall2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/flying-kick1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/flying-kick1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/flying-kick2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/flying-kick2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/hurt1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/hurt1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/hurt2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/hurt2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/idle4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/jump1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/jump1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/jump2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/jump2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/kick5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/punch6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GothicVania Church/Sprites/Player/walk6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/EventSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/EventSystem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/PlayerKnight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/PlayerKnight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BowController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinotaurWalkState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinotaurWalkState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/Scenes/demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/Scenes/demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/groundPlatformGrass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/groundPlatformGrass.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/big-crate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/big-crate.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/block-big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/block-big.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/block.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/block.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/bush.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/bush.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/crank-down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/crank-down.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/crank-up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/crank-up.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/crate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/crate.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/door.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/door.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/face-block.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/face-block.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/house.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/house.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/platform-long.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/platform-long.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/rock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/rock.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/shrooms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/shrooms.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/sign.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/sign.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/skulls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/skulls.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/small-platform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/small-platform.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/spike-skull.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/spike-skull.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/spikes-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/spikes-top.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/spikes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/spikes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/props/tree.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/tileset-sliced.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/tileset-sliced.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/tileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Environment/tileset.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/eagle/eagle-attack-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/idle/frog-idle-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/jump.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/jump/frog-jump-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/jump/frog-jump-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/jump/frog-jump-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/frog/jump/frog-jump-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Enemies/opossum/opossum-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/enemy-death/enemy-death-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Fx/item-feedback/item-feedback-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/cherry/cherry-7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/Items/gem/gem-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/climb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/climb/player-climb-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/climb/player-climb-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/climb/player-climb-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/climb/player-climb-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/climb/player-climb-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/climb/player-climb-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/crouch.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/crouch/player-crouch-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/crouch/player-crouch-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/crouch/player-crouch-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/crouch/player-crouch-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/hurt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/hurt/player-hurt-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/hurt/player-hurt-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/hurt/player-hurt-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/hurt/player-hurt-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/idle/player-idle-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/jump.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/jump/player-jump-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/jump/player-jump-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/jump/player-jump-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/jump/player-jump-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sunnyland/artwork/Sprites/player/run/player-run-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/Thaleah_DemoBackground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Materials/Thaleah_DemoBackground.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/ThaleahFat.fontsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/ThaleahFat.fontsettings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Thaleah_Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Thaleah_Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Thaleah_Readme.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thaleah_PixelFont/Thaleah_Readme.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +503,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeartController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FireMageDieState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GhoulStateBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuGhoulController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingPlatformController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Prefabs/Projectiles/Arrow.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextSetter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,6 +518,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwordController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnTriggerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkeletonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyBlueKnightWalkStateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireArrowItemController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,26 +536,25 @@
     <setting file="file://$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MinotaurWalkState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/JoystickController.cs" />
         <option value="$PROJECT_DIR$/Assets/SwordController.cs" />
         <option value="$PROJECT_DIR$/Assets/HitStateBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBlueKnightWalkStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowItemController.cs" />
         <option value="$PROJECT_DIR$/Assets/TempManagerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneButtonController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/EventSystemController.cs" />
         <option value="$PROJECT_DIR$/Assets/CanvasController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShroomPowerupController.cs" />
@@ -75,25 +563,39 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthBarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HeartController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHitController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/DoorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" />
         <option value="$PROJECT_DIR$/Assets/MinotaurIdleStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/MinotaurWalkState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireballController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/MenuGhoulController.cs" />
         <option value="$PROJECT_DIR$/Assets/GhoulStateBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/StartTextController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireballSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/FireMageDieState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" />
+        <option value="$PROJECT_DIR$/Assets/MovingPlatformController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SkeletonDieState.cs" />
+        <option value="$PROJECT_DIR$/Assets/SpatnTriggerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SpawnTriggerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SkeletonController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnTriggerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovingPlatformController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SkeletonController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MinotaurWalkState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/TextSetter.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +607,7 @@
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -163,7 +666,8 @@
       <workItem from="1570690481854" duration="16315000" />
       <workItem from="1570789192284" duration="4095000" />
       <workItem from="1570871826705" duration="4373000" />
-      <workItem from="1570951016875" duration="3311000" />
+      <workItem from="1570951016875" duration="7576000" />
+      <workItem from="1571126557156" duration="15305000" />
     </task>
     <servers />
   </component>

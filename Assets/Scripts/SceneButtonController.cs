@@ -22,7 +22,7 @@ public class SceneButtonController : MonoBehaviour {
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
-                        sceneHandler.ChangeScene();
+                        sceneHandler.ChangeScene("level0");
                     }
                     break;
             }

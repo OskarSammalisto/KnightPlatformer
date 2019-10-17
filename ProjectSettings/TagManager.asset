@@ -10,6 +10,7 @@ TagManager:
   - SceneHandler
   - Arrow
   - Minotaur
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -58,4 +59,7 @@ TagManager:
     locked: 0
   - name: InputLayer
     uniqueID: 1602041985
+    locked: 0
+  - name: LoadLevelLayer
+    uniqueID: 1690714403
     locked: 0

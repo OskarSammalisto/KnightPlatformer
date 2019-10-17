@@ -19,7 +19,7 @@ public class StartMenubutton : MonoBehaviour
         startText.enabled = false;
         boxCollider = GetComponent<BoxCollider2D>();
         boxCollider.enabled = false;
-        async = SceneManager.LoadSceneAsync("Level1");
+        async = SceneManager.LoadSceneAsync("Level0");
         async.allowSceneActivation = false;
         StartCoroutine(StartSequence());
 

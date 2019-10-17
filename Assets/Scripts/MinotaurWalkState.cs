@@ -13,7 +13,7 @@ public class MinotaurWalkState : StateMachineBehaviour
     private int distanceHash = Animator.StringToHash("distance");
     
     //walk speed
-    private float speed = 1.2f;
+    private float speed = 2f;
     
     
     

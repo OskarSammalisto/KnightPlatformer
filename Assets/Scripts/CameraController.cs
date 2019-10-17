@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
     public Transform player;
 
     private void Start() {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+       player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update() {
@@ -22,6 +22,12 @@ public class CameraController : MonoBehaviour {
 
 
         }
+
+
+//        if (player == null) {
+//             
+//        }
+        
         
     }
 }
