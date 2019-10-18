@@ -21,6 +21,7 @@ public class StartMenubutton : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         boxCollider.enabled = false;
         StartCoroutine(StartSequence());
+        LoadScene();
 
     }
 
@@ -33,7 +34,7 @@ public class StartMenubutton : MonoBehaviour
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
-                        music.ScreenPressed();
+                      
                         ChangeScene();
                     }
                     break;
@@ -42,10 +43,10 @@ public class StartMenubutton : MonoBehaviour
         }
     }
 
-//    private void LoadScene() {
-//        
-//        async.allowSceneActivation = false;
-//    }
+    private void LoadScene() {
+        async = SceneManager.LoadSceneAsync("Level0");
+        async.allowSceneActivation = false;
+    }
 
     IEnumerator StartSequence() {
         
@@ -57,11 +58,11 @@ public class StartMenubutton : MonoBehaviour
 
     private void ChangeScene()
     {
-        async = SceneManager.LoadSceneAsync("Level0");
-//        if (async != null)
-//        {
-//            async.allowSceneActivation = true;
-//        }
+        
+        if (async != null)
+        {
+            async.allowSceneActivation = true;
+        }
 
         
     }

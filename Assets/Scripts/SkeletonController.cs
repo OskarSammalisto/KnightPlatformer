@@ -15,7 +15,7 @@ public class SkeletonController : MonoBehaviour {
     private int dieHash = Animator.StringToHash("die");
     
     //constants
-    private float damage = 30;
+    private float damage = 10;
     private float speed = 2F;
    
     

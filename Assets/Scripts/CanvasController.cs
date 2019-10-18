@@ -16,6 +16,12 @@ public class CanvasController : MonoBehaviour
         Canvas canvas = gameObject.GetComponent<Canvas>();
         canvas.worldCamera = Camera.main;
     }
+    
+    void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= SceneManager_activeSceneChanged;
+        
+    }
 
 
     private static CanvasController _instance;

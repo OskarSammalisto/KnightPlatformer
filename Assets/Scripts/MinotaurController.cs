@@ -12,6 +12,7 @@ public class MinotaurController : MonoBehaviour {
     private Rigidbody2D playerRB;
     public BoxCollider2D trigger;
     public BoxCollider2D normalCollider;
+    public GameObject finalMenu;
     
     //less update rotation
     private float rotateDelay = 10;
@@ -47,6 +48,7 @@ public class MinotaurController : MonoBehaviour {
 
 
     void Start() {
+        finalMenu.SetActive(false);
         dead = false;
         animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
@@ -144,6 +146,7 @@ public class MinotaurController : MonoBehaviour {
         dead = true;
         trigger.enabled = false;
         normalCollider.enabled = false;
+        finalMenu.SetActive(true);
         //Physics2D.IgnoreLayerCollision(12, 11, true);
 
         //suspend object activity

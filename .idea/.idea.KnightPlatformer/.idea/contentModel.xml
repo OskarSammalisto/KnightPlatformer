@@ -63,9 +63,6 @@
             </e>
           </e>
         </e>
-        <e p="LevelMusicManager.cs" t="Include" />
-        <e p="QuitToMenuButton.cs" t="Include" />
-        <e p="RestartButton.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ArrowController.cs" t="Include" />
           <e p="ArrowItemController.cs" t="Include" />
@@ -87,29 +84,33 @@
           <e p="HeartController.cs" t="Include" />
           <e p="HitStateBehaviour.cs" t="Include" />
           <e p="KnightMovementController.cs" t="Include" />
+          <e p="LevelMusicManager.cs" t="Include" />
+          <e p="MenuFromEnd.cs" t="Include" />
           <e p="MenuGhoulController.cs" t="Include" />
           <e p="MinotaurController.cs" t="Include" />
           <e p="MinotaurIdleStateController.cs" t="Include" />
           <e p="MinotaurWalkState.cs" t="Include" />
           <e p="MovingPlatformController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="QuitToMenuButton.cs" t="Include" />
+          <e p="RestartButton.cs" t="Include" />
           <e p="SceneButtonController.cs" t="Include" />
           <e p="SceneHandler.cs" t="Include" />
           <e p="ShieldController.cs" t="Include" />
           <e p="ShroomPowerupController.cs" t="Include" />
           <e p="SkeletonController.cs" t="Include" />
           <e p="SkeletonDieState.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
           <e p="SpawnTriggerController.cs" t="Include" />
           <e p="SpearController.cs" t="Include" />
           <e p="StartMenubutton.cs" t="Include" />
+          <e p="StartMenuMusic.cs" t="Include" />
           <e p="StartTextController.cs" t="Include" />
           <e p="SwichWeaponController.cs" t="Include" />
           <e p="SwordController.cs" t="Include" />
           <e p="TempManagerScript.cs" t="Include" />
           <e p="TextSetter.cs" t="Include" />
         </e>
-        <e p="SoundManager.cs" t="Include" />
-        <e p="StartMenuMusic.cs" t="Include" />
       </e>
       <e p="KnightPlatformer.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

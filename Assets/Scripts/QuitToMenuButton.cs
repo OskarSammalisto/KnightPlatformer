@@ -23,14 +23,17 @@ public class QuitToMenuButton : MonoBehaviour
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
                         SceneManager.LoadScene("StartingMenu");
-                        foreach (GameObject gameObject in gameObjectsToDestroy) {
-                            Destroy(gameObject);
+                        foreach (GameObject gameObj in gameObjectsToDestroy) {
+                            if (gameObj != null) {
+                                Destroy(gameObj);
+                            }
+            
                         }
-                        
                     }
 
                     break;
             }
         }
     }
+    
 }

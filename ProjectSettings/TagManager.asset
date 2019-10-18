@@ -12,6 +12,8 @@ TagManager:
   - Minotaur
   - Floor
   - SoundManager
+  - Quit
+  - EventSystem
   layers:
   - Default
   - TransparentFX

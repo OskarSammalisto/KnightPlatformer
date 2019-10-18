@@ -16,7 +16,7 @@ public class TextSetter : MonoBehaviour
     
     void Start() {
         loadText.text = didYouKnow + loadScreenTexts[Random.Range(0, loadScreenTexts.Count)];
-        Debug.Log("load scene");
+        
     }
 
    

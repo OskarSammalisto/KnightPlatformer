@@ -8,9 +8,16 @@ public class LevelMusicManager : MonoBehaviour {
     private int songIndex;
     
     void Start() {
+        StartCoroutine(PlayMusic());
         soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+        
+        
+    }
+
+    IEnumerator PlayMusic() {
+        yield return new WaitForSeconds(1);
         if (SceneManager.GetActiveScene().name == "Level0") {
-            songIndex = 0;
+                    songIndex = 0;
         }
         else if (SceneManager.GetActiveScene().name == "Level1") {
             songIndex = 1;
@@ -19,6 +26,8 @@ public class LevelMusicManager : MonoBehaviour {
             songIndex = 2;
         }
         soundManager.PlayLevelThemeSong(songIndex);
+        
+        
         
     }
 

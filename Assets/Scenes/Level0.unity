@@ -955,6 +955,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 7771058472313470711, guid: efab50e5af482e44394cf5228d8678b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: EventSystem
+      objectReference: {fileID: 0}
     - target: {fileID: 7771058472313470666, guid: efab50e5af482e44394cf5228d8678b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1059,6 +1064,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 986483823781963692, guid: efab50e5af482e44394cf5228d8678b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Quit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efab50e5af482e44394cf5228d8678b6, type: 3}
