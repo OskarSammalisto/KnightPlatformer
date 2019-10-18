@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public GameObject berserkerParticles;
     public HealthBarController healthBarController;
     public GameObject deathMenu;
+    public SoundManager soundManager;
     
     
     //Points for sword stab linecast
@@ -181,6 +182,7 @@ public class PlayerController : MonoBehaviour
 
         if (jumpCrouchCheck >= joystickJumpOffset && canJump) {
             jump = true;
+            soundManager.PlayJump();
             animator.SetBool(isJumpingHash, jump);
             StartCoroutine(ReJumpDelay());
 
@@ -258,6 +260,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator StabWithDelay() {
         animator.SetTrigger(stabHash);
+        soundManager.PlaySword();
         yield return new WaitForSeconds(stabDelay);
         if (!crouch) {
            // animator.SetTrigger(stabHash);
@@ -329,6 +332,7 @@ public class PlayerController : MonoBehaviour
         if (canUseShield && !bowActive && !dead) {
             animator.SetTrigger(shieldUpHash);
             shieldActive = true;
+            soundManager.PlayShield();
             StartCoroutine(SecondShieldDelay());
         }
 
@@ -395,7 +399,8 @@ public class PlayerController : MonoBehaviour
     }
     
     //Registers incoming damage
-    public void TakeDamage(float damage) {  //TODO make shield active dependent on direction facing, ie not active if hit in back
+    public void TakeDamage(float damage) { 
+        soundManager.PlayHit();
         if (!shieldActive) {
             health -= damage;
             if (health < 0) {

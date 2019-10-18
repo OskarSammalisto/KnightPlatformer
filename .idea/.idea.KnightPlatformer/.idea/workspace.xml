@@ -4,16 +4,11 @@
     <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/EventSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/EventSystem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RestartButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestartButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartingMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartingMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnTriggerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnTriggerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundManager.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,54 +20,55 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeartController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelMusicManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GhoulStateBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuGhoulController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingPlatformController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Prefabs/Projectiles/Arrow.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwordController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpearController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowItemController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StartMenuMusic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RestartButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MinotaurWalkState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeartController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GhoulStateBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuGhoulController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingPlatformController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QuitToMenuButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireMageController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Level0.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthBarController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwordController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MinotaurController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnTriggerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkeletonController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyBlueKnightWalkStateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireArrowItemController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShroomPowerupController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Prefabs/Projectiles/fireball1.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpearController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwichWeaponController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ArrowItemController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventSystemController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FireballController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StartMenuMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RestartButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MinotaurWalkState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/KnightMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBlueKnightWalkStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HitStateBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowItemController.cs" />
@@ -104,7 +100,6 @@
         <option value="$PROJECT_DIR$/Assets/SpatnTriggerController.cs" />
         <option value="$PROJECT_DIR$/Assets/SpawnTriggerController.cs" />
         <option value="$PROJECT_DIR$/Assets/SkeletonController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnTriggerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovingPlatformController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SwordController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShieldController.cs" />
@@ -116,13 +111,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/TextSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneButtonController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/StartMenuMusic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StartMenubutton.cs" />
         <option value="$PROJECT_DIR$/Assets/LevelMusicManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/RestartButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/QuitToMenuButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnTriggerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SoundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -194,7 +191,7 @@
       <workItem from="1570789192284" duration="4095000" />
       <workItem from="1570871826705" duration="4373000" />
       <workItem from="1570951016875" duration="7576000" />
-      <workItem from="1571126557156" duration="21242000" />
+      <workItem from="1571126557156" duration="23265000" />
     </task>
     <servers />
   </component>

@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class RestartButton : MonoBehaviour {
-    public GameObject knight;
-    private PlayerController playerController;
+public class QuitToMenuButton : MonoBehaviour
+{
+    public List<GameObject> gameObjectsToDestroy = new List<GameObject>();
+    public PlayerController playerController;
+    
+   
 
-    void Start() {
-        playerController = knight.GetComponent<PlayerController>();
-    }
-
-
+   
     void Update() {
         foreach (Touch touch in Input.touches) {
             
@@ -19,12 +19,14 @@ public class RestartButton : MonoBehaviour {
             RaycastHit2D hit = Physics2D.Raycast(touchPosition, Vector2.zero);
             
 
-
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
+                        SceneManager.LoadScene("StartingMenu");
+                        foreach (GameObject gameObject in gameObjectsToDestroy) {
+                            Destroy(gameObject);
+                        }
                         
-                        playerController.Respawn();
                     }
 
                     break;

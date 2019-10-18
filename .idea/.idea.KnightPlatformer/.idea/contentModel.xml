@@ -64,6 +64,7 @@
           </e>
         </e>
         <e p="LevelMusicManager.cs" t="Include" />
+        <e p="QuitToMenuButton.cs" t="Include" />
         <e p="RestartButton.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ArrowController.cs" t="Include" />

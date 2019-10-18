@@ -20,7 +20,7 @@ public class SpawnTriggerController : MonoBehaviour {
 
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("triggered");
+        
         //spawnSkeleton
         int randomSpawnPoint = Random.Range(0, spawnPoints.Count);
         Instantiate(skeletonPrefab, spawnPoints[randomSpawnPoint].position, transform.rotation);

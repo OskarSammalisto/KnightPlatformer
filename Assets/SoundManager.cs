@@ -6,7 +6,9 @@ public class SoundManager : MonoBehaviour {
     private AudioSource audioSource;
     public List<AudioClip> songs = new List<AudioClip>();
     public AudioClip sword;
-    
+    public AudioClip shield;
+    public AudioClip jump;
+    public AudioClip hit;
     
     
     
@@ -24,6 +26,18 @@ public class SoundManager : MonoBehaviour {
 
     public void PlaySword() {
         audioSource.PlayOneShot(sword);
+    }
+
+    public void PlayShield() {
+        audioSource.PlayOneShot(shield);
+    }
+
+    public void PlayJump() {
+        audioSource.PlayOneShot(jump);
+    }
+
+    public void PlayHit() {
+        audioSource.PlayOneShot(hit);
     }
     
     
