@@ -63,6 +63,8 @@
             </e>
           </e>
         </e>
+        <e p="LevelMusicManager.cs" t="Include" />
+        <e p="RestartButton.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ArrowController.cs" t="Include" />
           <e p="ArrowItemController.cs" t="Include" />
@@ -105,6 +107,8 @@
           <e p="TempManagerScript.cs" t="Include" />
           <e p="TextSetter.cs" t="Include" />
         </e>
+        <e p="SoundManager.cs" t="Include" />
+        <e p="StartMenuMusic.cs" t="Include" />
       </e>
       <e p="KnightPlatformer.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

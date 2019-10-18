@@ -11,6 +11,7 @@ TagManager:
   - Arrow
   - Minotaur
   - Floor
+  - SoundManager
   layers:
   - Default
   - TransparentFX

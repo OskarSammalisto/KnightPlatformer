@@ -12,6 +12,7 @@ public class StartMenubutton : MonoBehaviour
     AsyncOperation async;
     private BoxCollider2D boxCollider;
     public TMP_Text startText; 
+    public StartMenuMusic music;
     
     
     void Start() {
@@ -19,8 +20,6 @@ public class StartMenubutton : MonoBehaviour
         startText.enabled = false;
         boxCollider = GetComponent<BoxCollider2D>();
         boxCollider.enabled = false;
-        async = SceneManager.LoadSceneAsync("Level0");
-        async.allowSceneActivation = false;
         StartCoroutine(StartSequence());
 
     }
@@ -34,6 +33,7 @@ public class StartMenubutton : MonoBehaviour
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
+                        music.ScreenPressed();
                         ChangeScene();
                     }
                     break;
@@ -42,7 +42,13 @@ public class StartMenubutton : MonoBehaviour
         }
     }
 
+//    private void LoadScene() {
+//        
+//        async.allowSceneActivation = false;
+//    }
+
     IEnumerator StartSequence() {
+        
         yield return new WaitForSeconds(3);
         boxCollider.enabled = true;
         startText.enabled = true;
@@ -51,11 +57,11 @@ public class StartMenubutton : MonoBehaviour
 
     private void ChangeScene()
     {
-        
-        if (async != null)
-        {
-            async.allowSceneActivation = true;
-        }
+        async = SceneManager.LoadSceneAsync("Level0");
+//        if (async != null)
+//        {
+//            async.allowSceneActivation = true;
+//        }
 
         
     }

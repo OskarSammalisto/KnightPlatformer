@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public GameObject arrowPrefab;
     public GameObject berserkerParticles;
     public HealthBarController healthBarController;
+    public GameObject deathMenu;
     
     
     //Points for sword stab linecast
@@ -87,7 +88,7 @@ public class PlayerController : MonoBehaviour
     private int hitForce = 150;
     
     //powerups
-    private float berserkerDuration = 30;
+    private float berserkerDuration = 15f;
     
     //sword damage
     private const float normalDamage = 2;
@@ -108,6 +109,7 @@ public class PlayerController : MonoBehaviour
     private static PlayerController _instance;
     
     void Start() {
+        deathMenu.SetActive(false);
         health = maxHealth;
         berserkerParticles.SetActive(false);
         ToggleWeaponButtons();
@@ -330,9 +332,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(SecondShieldDelay());
         }
 
-        if (health <= 0) {
-            Respawn();   //TODO: remove this!!!!
-        }
+        
         
     }
 
@@ -421,6 +421,7 @@ public class PlayerController : MonoBehaviour
     private void Die() {
         animator.SetBool(deadHash, true);
         dead = true;
+        deathMenu.SetActive(true);
     }
      private void EnemyHit(RaycastHit2D hit) {
           GameObject objHit = hit.collider.gameObject;
@@ -489,12 +490,13 @@ public class PlayerController : MonoBehaviour
          arrowsInQuiver += fireArrowsPickedUp;
      }
 
-     private void Respawn() {
+     public void Respawn() {
          animator.SetBool(deadHash, false);
          gameObject.transform.position = new Vector2(-7, -1);
          health = maxHealth;
          dead = false;
          SetHealthBar();
+         deathMenu.SetActive(false);
      }
      
 }

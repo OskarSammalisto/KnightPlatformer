@@ -6,6 +6,7 @@ public class SceneButtonController : MonoBehaviour {
 
     public GameObject sHandler;
     private SceneHandler sceneHandler;
+   
     
     void Start() {
         DontDestroyOnLoad(gameObject);
@@ -22,6 +23,7 @@ public class SceneButtonController : MonoBehaviour {
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (hit.collider != null && hit.collider.gameObject == gameObject) {
+                       
                         sceneHandler.ChangeScene("level0");
                     }
                     break;
