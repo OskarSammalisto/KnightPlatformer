@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     private float joystickJumpOffset = 0.5f;  //Offset until player jumps/crouches
     private  float joystickCrouchOffset = 0.5f;
     private bool canJump = true;          //prevents instant rejump on landing  
-    private float nextJumpDelay = 1.5f;    //set delay between jumps
+    private float nextJumpDelay = 1.2f;    //set delay between jumps
     private float horizontalMove = 0;        
     private float runSpeed = 18f;
 
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     private bool bowActive = false;
     private bool canStab = true;
     private float stabDelay = 0.25f;
-    private float secondStabDelay = 1f;
+    private float secondStabDelay = 0.5f;
     private int arrowsInQuiver = 5;
     private int fireArrowsInQuiver = 0;
     private float arrowMaxVelocity = 6f;
