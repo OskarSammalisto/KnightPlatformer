@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/PlayerKnight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/PlayerKnight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +73,6 @@
         <option value="$PROJECT_DIR$/Assets/MinotaurWalkState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireballController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/MenuGhoulController.cs" />
         <option value="$PROJECT_DIR$/Assets/GhoulStateBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/StartTextController.cs" />
@@ -114,6 +108,7 @@
         <option value="$PROJECT_DIR$/Assets/MenuFromEnd.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SkeletonController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       </list>
     </option>
   </component>
@@ -186,7 +181,7 @@
       <workItem from="1570871826705" duration="4373000" />
       <workItem from="1570951016875" duration="7576000" />
       <workItem from="1571126557156" duration="27560000" />
-      <workItem from="1571815636356" duration="1080000" />
+      <workItem from="1571815636356" duration="1639000" />
     </task>
     <servers />
   </component>
