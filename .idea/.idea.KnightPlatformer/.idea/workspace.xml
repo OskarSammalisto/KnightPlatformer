@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cce9ed91-95ee-476a-b72e-be9660ace275" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KnightPlatformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/EnemyBlueKnight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemies/EnemyBlueKnight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/ArrowFountain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/ArrowFountain.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/FireArrowFountain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/FireArrowFountain.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/Heart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/Heart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/shrooms.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PickUpItems/shrooms.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +184,7 @@
       <workItem from="1570871826705" duration="4373000" />
       <workItem from="1570951016875" duration="7576000" />
       <workItem from="1571126557156" duration="27560000" />
-      <workItem from="1571815636356" duration="2389000" />
+      <workItem from="1571815636356" duration="2984000" />
     </task>
     <servers />
   </component>
