@@ -6794,6 +6794,8 @@ MonoBehaviour:
     type: 3}
   berserkerParticles: {fileID: 3361425607632723093}
   healthBarController: {fileID: 0}
+  deathMenu: {fileID: 0}
+  soundManager: {fileID: 0}
   stabStart: {fileID: 3361425607699965967}
   stabEnd: {fileID: 3361425607044921975}
   crouchStabStart: {fileID: 3361425607906743206}
@@ -6803,7 +6805,6 @@ MonoBehaviour:
   swordButton: {fileID: 0}
   bowButton: {fileID: 0}
   shieldActive: 0
-  health: 100
 --- !u!50 &3361425608107253050
 Rigidbody2D:
   serializedVersion: 4
@@ -6820,7 +6821,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: 9000ef4465eb12b4381627d592b886d1, type: 2}
+  m_Material: {fileID: 6200000, guid: 5f53d227f8b51e34aa490db5cf17c589, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -6838,7 +6839,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18999994, y: 1.69}
+  m_Offset: {x: 0.13, y: 1.69}
   serializedVersion: 2
   m_Radius: 1.2599708
 --- !u!61 &3361425608107253048
@@ -6854,7 +6855,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19, y: 3.94}
+  m_Offset: {x: 0.13996267, y: 3.7102401}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6865,7 +6866,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2, y: 3.49}
+  m_Size: {x: 2.4602032, y: 3.9495196}
   m_EdgeRadius: 0
 --- !u!212 &3361425608107253044
 SpriteRenderer:

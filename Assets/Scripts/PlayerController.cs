@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 [SuppressMessage("ReSharper", "FieldCanBeMadeReadOnly.Local")]
 public class PlayerController : MonoBehaviour
 {
+    
+    //gameObjects and components
     public CharacterController2D Controller2D;
     public Joystick joystick;
     public Animator animator;
@@ -21,14 +23,14 @@ public class PlayerController : MonoBehaviour
     public SoundManager soundManager;
     
     
-    //Points for sword stab linecast
+    //position Points for sword stab linecast
     public GameObject stabStart;
     public GameObject stabEnd;
 
     public GameObject crouchStabStart;
     public GameObject crouchStabEnd;
     
-    //points for arrow
+    //position points for arrow
     public Transform arrowStartPoint;
     
     
@@ -61,7 +63,7 @@ public class PlayerController : MonoBehaviour
     private bool canJump = true;          //prevents instant rejump on landing  
     private float nextJumpDelay = 1.5f;    //set delay between jumps
     private float horizontalMove = 0;        
-    private float runSpeed = 15f;
+    private float runSpeed = 18f;
 
     private bool jump = false;
     private bool crouch = false;
@@ -86,7 +88,7 @@ public class PlayerController : MonoBehaviour
     private int fireArrowsInQuiver = 0;
     private float arrowMaxVelocity = 6f;
 
-    private int hitForce = 150;
+    private int hitForce = 90;
     
     //powerups
     private float berserkerDuration = 15f;
@@ -97,9 +99,8 @@ public class PlayerController : MonoBehaviour
     private float berserkerDamage = 4;
     
     //health settings
-    [SerializeField]
-    private float health = 100f;
-    private float maxHealth = 100f;
+    private float health = 300f;
+    private float maxHealth = 300f;
     private int lives;
     private bool dead = false;
     
@@ -326,7 +327,7 @@ public class PlayerController : MonoBehaviour
 //        }
 //    }
   
-   
+   //Shield and Weapons 
     
     public void ShieldUp() {
         if (canUseShield && !bowActive && !dead) {

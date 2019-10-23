@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour {
     private int direction = 1;
     private bool canFlip = true;
     
-    private int hitForce = 700;
+    private int hitForce = 400;
 
     private float secondAttackDelay = 2f;
     private bool canTrigger = true;
