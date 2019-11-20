@@ -99,8 +99,8 @@ public class PlayerController : MonoBehaviour
     private float berserkerDamage = 4;
     
     //health settings
-    private float health = 300f;
-    private float maxHealth = 300f;
+    private float health = 100f;
+    private float maxHealth = 100f;
     private int lives;
     private bool dead = false;
     
